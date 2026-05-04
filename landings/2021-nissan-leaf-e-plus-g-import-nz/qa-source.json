@@ -1,0 +1,45 @@
+{
+  "landing_id": "233a9539-a11b-4c0b-8bdf-2da2390c183f",
+  "slug": "2021-nissan-leaf-e-plus-g-import-nz",
+  "seo": {
+    "page_title": "2021 Nissan Leaf E+ G import to NZ",
+    "meta_description": "Import a 2021 Nissan Leaf E+ G to NZ with verified battery SOH, up to 385 km range and clear pricing on shipping and compliance.",
+    "h1_tag": "2021 Leaf E+ G: long-range EV for NZ commutes",
+    "primary_keyword": "2021 Nissan Leaf E+ G import NZ",
+    "secondary_keywords": [
+      "Nissan Leaf 62 kWh import",
+      "Leaf E+ G Japan auction",
+      "import electric car to NZ"
+    ]
+  },
+  "gtm_id": "GTM-5HTKZPGD",
+  "google_site_verification": "NgYfcEG5g8qSgyUE1zOUXczcbmNTxFKue8oMl7LRBp8",
+  "default_robots": "noindex,nofollow",
+  "lead_form_webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
+  "application_url": "https://importyourcar.co.nz/application-import1775120657490",
+  "forms_present": [
+    "lead-main",
+    "lead-persona",
+    "lead-mid-cta",
+    "lead-risks",
+    "lead-subscribe"
+  ],
+  "has_testimonials": true,
+  "images_used": [
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-hero-exterior-front.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-savings.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-shipping.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-exterior-nz-mountains.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-wellington.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-auckland.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-family.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-interior-dashboard.jpg",
+    "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-interior-cabin.jpg"
+  ],
+  "notes": {
+    "header_behavior": "hide on scroll down, show on scroll up",
+    "mobile_first": true,
+    "body_text_min_size": "text-sm or larger",
+    "themes_present": ["theme-light-blue", "theme-dark-blue", "theme-light-green", "theme-dark-slate"]
+  }
+}
