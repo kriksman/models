@@ -1,676 +1,101 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+
+<!doctype html>
+<html lang="en-NZ">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>2021 Nissan Leaf E+ G import to NZ</title>
-  <meta name="description" content="Import a 2021 Nissan Leaf E+ G to NZ with verified battery SOH, up to 385 km range and clear pricing on shipping and compliance." />
-  <meta name="robots" content="noindex,nofollow" />
+  <meta name="robots" content="noindex,nofollow">
   <meta name="google-site-verification" content="NgYfcEG5g8qSgyUE1zOUXczcbmNTxFKue8oMl7LRBp8" />
-  <meta property="og:title" content="Import a 2021 Nissan Leaf E+ G to New Zealand" />
-  <meta property="og:description" content="62 kWh battery, up to 385 km range and verified battery SOH. ImportYourCar.co.nz helps NZ buyers source 2021 Leaf E+ Gs direct from Japan." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://importyourcar.co.nz/2021-nissan-leaf-e-plus-g-import-nz" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-hero-exterior-front.jpg" />
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-  </script>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5HTKZPGD"></script>
-
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ["system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
-          }
-        }
-      }
-    };
-  </script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+<script>
+(function(w,d,s,l,i){
+w[l]=w[l]||[];
+w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),
+dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5HTKZPGD');
+</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"2021 Nissan Leaf E+ G import to NZ","url":"https://importyourcar.co.nz/2021-nissan-leaf-e-plus-g-import-nz"}</script>
 </head>
-<body class="theme-light-blue theme-dark-blue theme-light-green theme-dark-slate bg-slate-50 text-slate-950 font-sans" x-data="landingPage()" x-init="init()">
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HTKZPGD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body class="bg-slate-50 text-slate-950 theme-light-blue theme-premium-dark theme-warm-cream theme-high-contrast" x-data>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HTKZPGD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-  <header x-data="headerScroll()" x-init="init()" x-bind:class="{'-translate-y-full shadow-none' : scrollingDown, 'translate-y-0 shadow-sm' : !scrollingDown}" class="fixed top-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-b border-slate-200 transition-transform duration-300">
-    <div class="max-w-5xl mx-auto px-4 flex items-center justify-between h-14">
-      <a href="#top" class="flex items-center space-x-2">
-        <img src="https://raw.githubusercontent.com/kriksman/models/main/shared/assets/import-logo.png" alt="ImportYourCar.co.nz" class="h-8 w-auto" />
-        <span class="text-sm font-semibold tracking-tight text-slate-800">ImportYourCar.co.nz</span>
-      </a>
-      <a href="#lead-main" class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-full bg-blue-700 hover:bg-blue-800 text-white text-sm font-medium">Get Leaf E+ G pricing</a>
-    </div>
+  <header id="iycHeader" class="fixed top-0 left-0 right-0 z-50 bg-white p-4 shadow transition-transform">
+    <img src="https://raw.githubusercontent.com/kriksman/models/main/shared/assets/import-logo.png" class="h-12" alt="Import Your Car logo">
   </header>
 
-  <main id="top" class="pt-16">
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-2 md:items-center">
-        <div>
-          <p class="text-sm font-semibold text-blue-700 tracking-wide uppercase mb-2">2021 Nissan Leaf E+ G import NZ</p>
-          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3">2021 Leaf E+ G: long-range EV for NZ commutes</h1>
-          <p class="text-base leading-relaxed text-slate-800 mb-4">The 2021 Nissan Leaf E+ G runs a 62 kWh battery with up to 385 km WLTP range, so most NZ commutes and weekend trips are covered without constant charging stops.</p>
-          <ul class="space-y-1.5 text-base text-slate-800 mb-6">
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-blue-700"></span><span>NZ-based team since 2009</span></li>
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-blue-700"></span><span>Japan specialists — direct auction access</span></li>
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-blue-700"></span><span>Transparent pricing — compliance is part of the process</span></li>
-          </ul>
-          <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-            <a href="#lead-main" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-blue-700 hover:bg-blue-800 text-white font-semibold text-base">Find my 2021 Leaf E+ G</a>
-            <p class="text-sm text-slate-700">NZ based, since 2009.</p>
-          </div>
-        </div>
-        <div class="space-y-3">
-          <div class="aspect-video rounded-lg overflow-hidden bg-slate-100">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-hero-exterior-front.jpg" alt="Nissan Leaf E+ G 2021 — semantic auction docs — Import to NZ" class="w-full h-full object-cover" />
-          </div>
-          <p class="text-sm text-slate-700 leading-relaxed">Here’s a 2021 Leaf E+ G walkaround, showing the 5-seat hatch layout, 17-inch alloys and simple cabin with Apple CarPlay and Android Auto on the main screen.</p>
-        </div>
+  <main class="mx-auto max-w-7xl px-4 pt-28">
+    <section class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h1 class="text-4xl font-black md:text-6xl">2021 Leaf E+ G: long-range EV for NZ commutes</h1>
+        <p class="mt-5 text-xl leading-relaxed">The 2021 Nissan Leaf E+ G runs a 62 kWh battery with up to 385 km WLTP range, so most NZ commutes and weekend trips are covered without constant charging stops.</p>
       </div>
+      <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/_review/2021-nissan-leaf-e-plus-g-import-nz-semantic-auction-docs-r1.jpg" class="rounded-3xl shadow-xl" alt="Nissan Leaf E+ G 2021 — hero exterior front — Import to NZ">
     </section>
 
-    <section id="lead-main" class="bg-slate-50 border-y border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2.5fr)] md:items-start">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold mb-3">Find your Leaf E+ G — we'll do the searching</h2>
-          <p class="text-base text-slate-800 mb-4">Fill in your details to get started. We'll search the Japanese auctions and come back with real options and pricing by email.</p>
-          <p class="text-sm text-slate-700">We’ll outline costs, typical battery SOH and timing so you can compare importing with buying from a NZ yard.</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-4 sm:p-5" x-data="leadForm('main')">
-          <form @submit.prevent="handleSubmit" class="space-y-4">
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="name-main">Name</label>
-                <input id="name-main" name="name" type="text" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="email-main">Email</label>
-                <input id="email-main" name="email" type="email" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="phone-main">Mobile</label>
-                <input id="phone-main" name="phone" type="tel" class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="budget-main">Target budget (NZD)</label>
-                <input id="budget-main" name="budget" type="text" placeholder="$32k–$42k typical" class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-800 mb-1" for="driving-main">How do you plan to use the car?</label>
-              <textarea id="driving-main" name="driving" rows="3" placeholder="Daily commute, school runs, weekend trips, typical daily kms..." class="w-full rounded-md border border-slate-300 px-3 py-2 text-base"></textarea>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="mileage-main">Preferred mileage</label>
-                <input id="mileage-main" name="mileage" type="text" placeholder="e.g. under 40,000 km" class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="location-main">Region in NZ</label>
-                <input id="location-main" name="location" type="text" placeholder="Auckland, Wellington, Christchurch..." class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-            </div>
-            <input type="hidden" name="landing_id" value="233a9539-a11b-4c0b-8bdf-2da2390c183f" />
-            <input type="hidden" name="landing_slug" value="2021-nissan-leaf-e-plus-g-import-nz" />
-            <input type="hidden" name="form_variant" :value="variant" />
-            <input type="hidden" name="utm_source" x-model="utms.utm_source" />
-            <input type="hidden" name="utm_medium" x-model="utms.utm_medium" />
-            <input type="hidden" name="utm_campaign" x-model="utms.utm_campaign" />
-            <input type="hidden" name="utm_term" x-model="utms.utm_term" />
-            <input type="hidden" name="utm_content" x-model="utms.utm_content" />
-            <p class="text-xs text-slate-500">By submitting, you’re asking us to contact you about importing a 2021 Nissan Leaf E+ G. We’ll outline options and typical costs so you can decide if importing is right for you.</p>
-            <button type="submit" :disabled="submitting" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-blue-700 hover:bg-blue-800 text-white font-semibold text-base disabled:opacity-70 disabled:cursor-not-allowed">
-              <span x-show="!submitting">Find My Car</span>
-              <span x-show="submitting">Sending...</span>
-            </button>
-            <p class="text-xs text-slate-500 text-center">NZ based, since 2009.</p>
-          </form>
-        </div>
-      </div>
+    <div class="my-12"><form data-lead="1" onsubmit="return iycSubmit(this)" class="rounded-3xl bg-white p-6 shadow"><h2 class="text-3xl font-bold">Find your car</h2><input class="mt-4 w-full border-b-2 p-3 text-lg" name="name" placeholder="Name" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="email" placeholder="Email" type="email" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="phone" placeholder="Phone" required><button class="mt-6 w-full rounded-xl bg-blue-700 px-6 py-4 text-lg font-bold text-white">Find My Car</button></form></div>
+
+    <section id="gallery" class="grid gap-4 md:grid-cols-3">
+      <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-savings.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — hero exterior dynamic — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-shipping.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — exterior rear quarter — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-open-road.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — exterior nz mountains — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-feature-boot.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — interior dashboard — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-feature-hybrid-system.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — interior cabin — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-family.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — lifestyle auckland — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-wellington.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — lifestyle wellington — Import to NZ"><img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-auckland.jpg" class="h-72 w-full rounded-2xl object-cover" alt="Nissan Leaf E+ G 2021 — lifestyle family — Import to NZ">
     </section>
 
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-2 md:items-center">
-        <div class="space-y-3">
-          <h2 class="text-xl sm:text-2xl font-bold">Why Kiwis look at the 2021 Leaf E+ G</h2>
-          <p class="text-base text-slate-800 leading-relaxed">With a 62 kWh lithium-ion battery and up to 385 km WLTP range, the 2021 Leaf E+ G comfortably covers most NZ commutes, school runs and errands on a single charge. The 160 kW motor makes motorway on-ramps and passing lanes straightforward, while CHAdeMO fast charging keeps longer trips workable when you plan your stops.</p>
-          <p class="text-base text-slate-800 leading-relaxed">For many NZ drivers, it’s a way to cut fuel bills while still having usable range for weekend visits and inter-city trips, especially if you can charge at home or work.</p>
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div class="rounded-lg overflow-hidden bg-slate-100">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-wellington.jpg" alt="Nissan Leaf E+ G 2021 — lifestyle wellington — Import to NZ" class="w-full h-full object-cover" />
-          </div>
-          <div class="rounded-lg overflow-hidden bg-slate-100 flex flex-col gap-3">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-auckland.jpg" alt="Nissan Leaf E+ G 2021 — lifestyle family — Import to NZ" class="w-full h-1/2 object-cover" />
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-lifestyle-family.jpg" alt="Nissan Leaf E+ G 2021 — lifestyle auckland — Import to NZ" class="w-full h-1/2 object-cover" />
-          </div>
-        </div>
-      </div>
+    <div class="my-12"><form data-lead="2" onsubmit="return iycSubmit(this)" class="rounded-3xl bg-white p-6 shadow"><h2 class="text-3xl font-bold">Find your car</h2><input class="mt-4 w-full border-b-2 p-3 text-lg" name="name" placeholder="Name" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="email" placeholder="Email" type="email" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="phone" placeholder="Phone" required><button class="mt-6 w-full rounded-xl bg-blue-700 px-6 py-4 text-lg font-bold text-white">Find My Car</button></form></div>
+
+    <section id="faq">
+      <h2 class="text-3xl font-black">Common questions</h2>
     </section>
 
-    <section class="bg-slate-900 text-slate-50">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-center">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold mb-3">Typical savings vs NZ dealer pricing</h2>
-          <p class="text-base text-slate-100 leading-relaxed mb-3">Most 2021 Nissan Leaf E+ Gs we source land in the $32,000–$42,000 range, depending on mileage, grade and options. Comparable cars on NZ yards are usually several thousand dollars higher once on-road costs are added.</p>
-          <p class="text-base text-slate-100 leading-relaxed">When we price a car, we include shipping, NZ entry certification, compliance work and our fee in the estimate so you can compare it fairly with local listings.</p>
-        </div>
-        <div class="space-y-3">
-          <div class="rounded-lg overflow-hidden bg-slate-800 border border-slate-700">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-savings.jpg" alt="Nissan Leaf E+ G 2021 — semantic savings — Import to NZ" class="w-full h-44 object-cover" />
-          </div>
-          <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 flex flex-col gap-2">
-            <div class="flex justify-between text-sm">
-              <span class="text-slate-200">Typical landed range</span>
-              <span class="font-semibold text-slate-50">$32k – $42k</span>
-            </div>
-            <div class="flex justify-between text-sm">
-              <span class="text-slate-200">NZ yard asking (similar cars)</span>
-              <span class="text-slate-100">Often several thousand more</span>
-            </div>
-            <p class="text-xs text-slate-400">Figures are indicative only and depend on mileage, options, market rates and NZ rules at the time you buy.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-2 md:items-center">
-        <div class="grid grid-cols-2 gap-3">
-          <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-interior-dashboard.jpg" alt="Nissan Leaf E+ G 2021 — feature boot — Import to NZ" class="rounded-lg object-cover w-full h-full bg-slate-100" />
-          <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-interior-cabin.jpg" alt="Nissan Leaf E+ G 2021 — feature hybrid system — Import to NZ" class="rounded-lg object-cover w-full h-full bg-slate-100" />
-        </div>
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold mb-3">What sets the 2021 Leaf E+ G apart</h2>
-          <p class="text-base text-slate-800 leading-relaxed mb-3">The 2021 Nissan Leaf E+ G steps up from earlier Leafs with its 62 kWh lithium-ion battery (around 59 kWh usable), giving up to 385 km WLTP range when driven sensibly. A 160 kW electric motor and front-wheel drive provide brisk 0–100 km/h performance in about 7 seconds, which helps on NZ motorways and hilly routes, while strong regenerative braking works well in stop–start city traffic.</p>
-          <p class="text-base text-slate-800 leading-relaxed">ProPILOT, autonomous emergency braking and lane keep assist add useful safety support for daily commuting. Inside, you get 5-seat hatchback practicality, heated seats and Apple CarPlay/Android Auto to keep navigation and music straightforward on every trip.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-slate-50 border-y border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10">
-        <div class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2.5fr)] md:items-start">
-          <div>
-            <h2 class="text-xl sm:text-2xl font-bold mb-3">Is this car right for you?</h2>
-            <p class="text-base text-slate-800 leading-relaxed mb-3">If you’re a daily commuter or small family wanting to slash fuel bills and charge at home for pennies, the 2021 Leaf E+ G is worth a close look. The 62 kWh battery and up to 385 km WLTP range help ease range anxiety for regular trips between suburbs and city areas. For the Smart Commuter who wants predictable running costs and verified battery state of health (SOH), this is a solid match.</p>
-            <p class="text-base text-slate-800 leading-relaxed">Tell us how far you drive in a day and where you can charge. We’ll translate battery size and SOH into a realistic range for your situation.</p>
-          </div>
-          <div class="bg-white border border-slate-200 rounded-lg shadow-sm p-4 sm:p-5" x-data="leadForm('persona')">
-            <h3 class="text-lg font-semibold mb-2">Check if a Leaf E+ G suits your driving</h3>
-            <p class="text-sm text-slate-700 mb-3">Share your commute and budget. We’ll reply with a short email on whether this model is likely to fit and what landed pricing could look like.</p>
-            <form @submit.prevent="handleSubmit" class="space-y-3">
-              <div class="grid gap-3 sm:grid-cols-2">
-                <div>
-                  <label class="block text-sm font-medium text-slate-800 mb-1" for="name-persona">Name</label>
-                  <input id="name-persona" name="name" type="text" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-slate-800 mb-1" for="email-persona">Email</label>
-                  <input id="email-persona" name="email" type="email" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-                </div>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="kms-persona">Typical weekly kms</label>
-                <input id="kms-persona" name="weekly_kms" type="text" placeholder="e.g. 250 km" class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="notes-persona">Anything else we should know?</label>
-                <textarea id="notes-persona" name="notes" rows="2" placeholder="Charging at home or work, must-have features, budget range..." class="w-full rounded-md border border-slate-300 px-3 py-2 text-base"></textarea>
-              </div>
-              <input type="hidden" name="landing_id" value="233a9539-a11b-4c0b-8bdf-2da2390c183f" />
-              <input type="hidden" name="landing_slug" value="2021-nissan-leaf-e-plus-g-import-nz" />
-              <input type="hidden" name="form_variant" :value="variant" />
-              <input type="hidden" name="utm_source" x-model="utms.utm_source" />
-              <input type="hidden" name="utm_medium" x-model="utms.utm_medium" />
-              <input type="hidden" name="utm_campaign" x-model="utms.utm_campaign" />
-              <input type="hidden" name="utm_term" x-model="utms.utm_term" />
-              <input type="hidden" name="utm_content" x-model="utms.utm_content" />
-              <button type="submit" :disabled="submitting" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-blue-700 hover:bg-blue-800 text-white font-semibold text-base disabled:opacity-70 disabled:cursor-not-allowed">
-                <span x-show="!submitting">See if it fits me</span>
-                <span x-show="submitting">Sending...</span>
-              </button>
-              <p class="text-xs text-slate-500 text-center">We’ll email practical info — no obligation to go ahead.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10">
-        <div class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-start">
-          <div>
-            <h2 class="text-xl sm:text-2xl font-bold mb-3">Why import with ImportYourCar.co.nz?</h2>
-            <p class="text-base text-slate-800 leading-relaxed mb-3">ImportYourCar.co.nz has been helping New Zealanders bring in cars from Japan since 2009, with more than 1,000 vehicles sourced over that time. We’re an NZ-based team that focuses on clear communication, realistic pricing and explaining the process step by step.</p>
-            <p class="text-base text-slate-800 leading-relaxed mb-3">For each car we share the original Japanese auction sheet, photos and our comments so you can see what we see. Compliance, shipping and on-road preparation are treated as part of the process, not an afterthought, so you know what you’re signing up for.</p>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 sm:p-5">
-            <h3 class="text-lg font-semibold mb-3">Recent Leaf & EV buyers</h3>
-            <div class="space-y-4">
-              <div>
-                <p class="text-base text-slate-900 leading-relaxed">“They talked me through SOH, realistic range and what to expect from a 62 kWh Leaf on my Hamilton–Auckland commute. The landed price came in under similar cars on local yards, even after compliance.”</p>
-                <p class="text-sm font-semibold text-slate-800 mt-1">— Mark, Waikato commuter</p>
-              </div>
-              <div class="border-t border-slate-200 pt-3">
-                <p class="text-base text-slate-900 leading-relaxed">“I liked seeing the original auction sheet and their notes before I decided to bid. The whole process was explained in plain English and the car arrived as described.”</p>
-                <p class="text-sm font-semibold text-slate-800 mt-1">— Sarah, Auckland family of four</p>
-              </div>
-              <div class="border-t border-slate-200 pt-3">
-                <p class="text-base text-slate-900 leading-relaxed">“We compared a few 2021 Leafs on yards with what they could land from Japan. Even allowing for timing, importing made more sense for us.”</p>
-                <p class="text-sm font-semibold text-slate-800 mt-1">— Jason & Mia, Wellington</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-slate-900 text-slate-50">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 flex flex-col md:flex-row md:items-center gap-6">
-        <div class="flex-1">
-          <h2 class="text-xl sm:text-2xl font-bold mb-2">See what a Leaf E+ G could cost you landed</h2>
-          <p class="text-base text-slate-100 mb-3">Tell us your budget and mileage preferences and we’ll price real cars from the Japanese auctions for you.</p>
-        </div>
-        <div class="flex-1 max-w-md bg-slate-800 border border-slate-700 rounded-lg p-4 sm:p-5" x-data="leadForm('mid-cta')">
-          <form @submit.prevent="handleSubmit" class="space-y-3">
-            <div class="grid gap-3 sm:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium mb-1" for="name-mid">Name</label>
-                <input id="name-mid" name="name" type="text" required class="w-full rounded-md border border-slate-600 bg-slate-900/40 px-3 py-2 text-base text-slate-50" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1" for="email-mid">Email</label>
-                <input id="email-mid" name="email" type="email" required class="w-full rounded-md border border-slate-600 bg-slate-900/40 px-3 py-2 text-base text-slate-50" />
-              </div>
-            </div>
-            <div class="grid gap-3 sm:grid-cols-2">
-              <div>
-                <label class="block text-sm font-medium mb-1" for="budget-mid">Budget (NZD)</label>
-                <input id="budget-mid" name="budget" type="text" placeholder="$32k–$42k typical" class="w-full rounded-md border border-slate-600 bg-slate-900/40 px-3 py-2 text-base text-slate-50" />
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1" for="mileage-mid">Max mileage</label>
-                <input id="mileage-mid" name="mileage" type="text" placeholder="e.g. under 35,000 km" class="w-full rounded-md border border-slate-600 bg-slate-900/40 px-3 py-2 text-base text-slate-50" />
-              </div>
-            </div>
-            <input type="hidden" name="landing_id" value="233a9539-a11b-4c0b-8bdf-2da2390c183f" />
-            <input type="hidden" name="landing_slug" value="2021-nissan-leaf-e-plus-g-import-nz" />
-            <input type="hidden" name="form_variant" :value="variant" />
-            <input type="hidden" name="utm_source" x-model="utms.utm_source" />
-            <input type="hidden" name="utm_medium" x-model="utms.utm_medium" />
-            <input type="hidden" name="utm_campaign" x-model="utms.utm_campaign" />
-            <input type="hidden" name="utm_term" x-model="utms.utm_term" />
-            <input type="hidden" name="utm_content" x-model="utms.utm_content" />
-            <button type="submit" :disabled="submitting" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-blue-500 hover:bg-blue-400 text-white font-semibold text-base disabled:opacity-70 disabled:cursor-not-allowed">
-              <span x-show="!submitting">Let us calculate your weekly savings.</span>
-              <span x-show="submitting">Sending...</span>
-            </button>
-            <p class="text-xs text-slate-400 text-center">We’ll estimate likely landed pricing based on real auction data.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10">
-        <h2 class="text-xl sm:text-2xl font-bold mb-4">Key specs and what they mean in NZ</h2>
-        <div class="grid gap-4 md:grid-cols-2">
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-            <p class="text-sm font-semibold text-slate-900 mb-1">62 kWh lithium-ion battery (usable ~59 kWh)</p>
-            <p class="text-base text-slate-800">Gives enough capacity for most NZ daily driving and regular inter-city trips without needing to charge every day.</p>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-            <p class="text-sm font-semibold text-slate-900 mb-1">WLTP range up to 385 km</p>
-            <p class="text-base text-slate-800">Helps ease range anxiety for longer commutes, weekend visits and mixed city–motorway use when driven sensibly.</p>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-            <p class="text-sm font-semibold text-slate-900 mb-1">160 kW electric motor, front-wheel drive</p>
-            <p class="text-base text-slate-800">Delivers strong acceleration for motorway merging and hill climbs, while keeping things predictable in wet conditions.</p>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-            <p class="text-sm font-semibold text-slate-900 mb-1">CHAdeMO fast charging</p>
-            <p class="text-base text-slate-800">Lets you top up quickly at compatible public chargers around NZ, making longer trips more practical with planned stops.</p>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
-            <p class="text-sm font-semibold text-slate-900 mb-1">ProPILOT, AEB, lane keep assist</p>
-            <p class="text-base text-slate-800">Adds driver assistance features that can reduce fatigue on longer drives and provide extra support in busy traffic.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-slate-50 border-y border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 space-y-6">
-        <div class="max-w-2xl">
-          <h2 class="text-xl sm:text-2xl font-bold mb-3">How the 2021 Leaf E+ G compares</h2>
-          <p class="text-base text-slate-800 leading-relaxed">Here’s how the 2021 Nissan Leaf E+ G typically lines up when you’re weighing it against other Leaf variants and similar EVs.</p>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg overflow-hidden">
-          <dl class="divide-y divide-slate-200">
-            <div class="p-4">
-              <dt class="text-sm font-semibold text-slate-900 mb-1">Year range</dt>
-              <dd class="text-base text-slate-800">The E+ G with the 62 kWh battery is available from 2021 onwards. For NZ, later years usually mean newer safety tech and less battery age, and all 2021 cars meet current ESC requirements for entry.</dd>
-            </div>
-            <div class="p-4">
-              <dt class="text-sm font-semibold text-slate-900 mb-1">Engine options</dt>
-              <dd class="text-base text-slate-800">The E+ G runs a 62 kWh battery and 160 kW motor, while standard Leafs use a smaller battery and lower-output motor. In practice, the E+ G gives more range and stronger acceleration, which helps if you do regular highway or inter-city driving.</dd>
-            </div>
-            <div class="p-4">
-              <dt class="text-sm font-semibold text-slate-900 mb-1">Key trim differences</dt>
-              <dd class="text-base text-slate-800">E+ G models commonly add 17-inch alloys, more equipment and the higher-capacity battery compared with base trims. Some cars have extra options like upgraded audio or additional safety packs, which we check on the auction sheet for each vehicle.</dd>
-            </div>
-            <div class="p-4">
-              <dt class="text-sm font-semibold text-slate-900 mb-1">NZ compliance notes</dt>
-              <dd class="text-base text-slate-800">As a 2021 EV, the Leaf E+ G typically meets NZ entry standards if documentation is clean and no modifications are noted. There’s no Clean Car fee for EVs, but rules can change, so we confirm current CO2 charges or rebates and flag any entry certification risks before you commit.</dd>
-            </div>
-            <div class="p-4">
-              <dt class="text-sm font-semibold text-slate-900 mb-1">Auction availability</dt>
-              <dd class="text-base text-slate-800">2021 Leaf E+ G models appear regularly at major Japanese auctions, but good grades with low mileage attract strong bidding. That means you may wait a few weeks for the right car at the right price, especially if you’re picky about colour and options.</dd>
-            </div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-2 md:items-center">
-        <div class="space-y-3">
-          <h2 class="text-xl sm:text-2xl font-bold mb-1">How it works</h2>
-          <p class="text-base text-slate-800 leading-relaxed">You tell us the year, budget, mileage and features you care about, plus how far you typically drive in a day. We then track suitable 2021 Leaf E+ Gs across the main Japanese auctions, filter out the weak options and send you a short list with landed pricing. If one of them looks right, we handle the bidding, shipping and NZ side while you keep control of the key decisions.</p>
-          <ol class="space-y-3 mt-3">
-            <li>
-              <p class="font-semibold text-sm text-slate-900">1. Tell us what you're after</p>
-              <p class="text-base text-slate-800">Fill in the form or message us. We confirm your brief, talk through battery size, range needs and budget, and give you a cost breakdown before anything moves forward.</p>
-            </li>
-            <li>
-              <p class="font-semibold text-sm text-slate-900">2. We search the auctions</p>
-              <p class="text-base text-slate-800">We monitor USS, TAA, HAA and others. For the Leaf E+ G, we focus on battery state of health (SOH), mileage and use history, and we check any available battery health records on each shortlisted car.</p>
-            </li>
-            <li>
-              <p class="font-semibold text-sm text-slate-900">3. You approve, we bid</p>
-              <p class="text-base text-slate-800">We send you the auction sheet, photos and our recommendation in plain language. Once you’re happy with a specific car, you pay a deposit and we bid on your behalf.</p>
-            </li>
-            <li>
-              <p class="font-semibold text-sm text-slate-900">4. Shipping to NZ</p>
-              <p class="text-base text-slate-800">Typically 2–4 weeks depending on the sailing schedule. For less common colour and option combinations, allow a little extra time once the auction clears. We keep you updated along the way.</p>
-            </li>
-            <li>
-              <p class="font-semibold text-sm text-slate-900">5. Compliance and delivery</p>
-              <p class="text-base text-slate-800">The car goes through NZ entry certification and compliance, which typically passes if documentation is clean and no modifications are noted. Once it’s through, we arrange delivery or you can collect.</p>
-            </li>
-          </ol>
-        </div>
-        <div class="space-y-3">
-          <div class="rounded-lg overflow-hidden bg-slate-100">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-semantic-shipping.jpg" alt="Nissan Leaf E+ G 2021 — exterior rear quarter — Import to NZ" class="w-full h-full object-cover" />
-          </div>
-          <div class="rounded-lg overflow-hidden bg-slate-100">
-            <img src="https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-exterior-nz-mountains.jpg" alt="Nissan Leaf E+ G 2021 — lifestyle open road — Import to NZ" class="w-full h-full object-cover" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-slate-50 border-y border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:items-start">
-        <div>
-          <h2 class="text-xl sm:text-2xl font-bold mb-3">Understanding the main risks</h2>
-          <p class="text-base text-slate-800 leading-relaxed mb-4">Importing a Leaf E+ G is straightforward, but it helps to understand the main risks and how we handle them.</p>
-          <div class="space-y-4">
-            <div class="bg-white border border-slate-200 rounded-lg p-4">
-              <p class="text-sm font-semibold text-slate-900 mb-1">Battery SOH and long-term health</p>
-              <p class="text-base text-slate-800">For each Leaf E+ G we look for battery state of health (SOH) information, mileage patterns and use history on the auction sheet. We avoid cars with obvious red flags and talk you through what SOH means in real-world range terms before you decide.</p>
-            </div>
-            <div class="bg-white border border-slate-200 rounded-lg p-4">
-              <p class="text-sm font-semibold text-slate-900 mb-1">Hidden costs beyond the auction price</p>
-              <p class="text-base text-slate-800">We break down the estimate into auction price, our fee, inland transport in Japan, shipping, insurance, NZ port charges, compliance work and on-road costs. That way you can see where each dollar goes and compare it with local dealer pricing.</p>
-            </div>
-            <div class="bg-white border border-slate-200 rounded-lg p-4">
-              <p class="text-sm font-semibold text-slate-900 mb-1">Understanding auction grades</p>
-              <p class="text-base text-slate-800">We explain the auction grade, interior and exterior notes in plain English and share the original documentation and photos. Based on auction documentation, this model usually presents well when you target sensible grades, but we’ll flag any scratches, repairs or wear noted before you approve a bid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white border border-slate-200 rounded-lg p-4 sm:p-5" x-data="leadForm('risks')">
-          <h3 class="text-lg font-semibold mb-2">Ask us about battery SOH and risks</h3>
-          <p class="text-sm text-slate-700 mb-3">Share your questions about Leaf batteries, SOH and range. We’ll reply with practical info based on current auction listings.</p>
-          <form @submit.prevent="handleSubmit" class="space-y-3">
-            <div>
-              <label class="block text-sm font-medium text-slate-800 mb-1" for="email-risks">Email</label>
-              <input id="email-risks" name="email" type="email" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-800 mb-1" for="question-risks">Your main concern</label>
-              <textarea id="question-risks" name="question" rows="3" placeholder="Battery SOH, range, resale, timing, fees..." class="w-full rounded-md border border-slate-300 px-3 py-2 text-base"></textarea>
-            </div>
-            <input type="hidden" name="landing_id" value="233a9539-a11b-4c0b-8bdf-2da2390c183f" />
-            <input type="hidden" name="landing_slug" value="2021-nissan-leaf-e-plus-g-import-nz" />
-            <input type="hidden" name="form_variant" :value="variant" />
-            <input type="hidden" name="utm_source" x-model="utms.utm_source" />
-            <input type="hidden" name="utm_medium" x-model="utms.utm_medium" />
-            <input type="hidden" name="utm_campaign" x-model="utms.utm_campaign" />
-            <input type="hidden" name="utm_term" x-model="utms.utm_term" />
-            <input type="hidden" name="utm_content" x-model="utms.utm_content" />
-            <button type="submit" :disabled="submitting" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-blue-700 hover:bg-blue-800 text-white font-semibold text-base disabled:opacity-70 disabled:cursor-not-allowed">
-              <span x-show="!submitting">Send my question</span>
-              <span x-show="submitting">Sending...</span>
-            </button>
-            <p class="text-xs text-slate-500 text-center">We’ll respond by email. No obligation to proceed with an import.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-white">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10">
-        <div class="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2.2fr)] md:items-start">
-          <div>
-            <h2 class="text-xl sm:text-2xl font-bold mb-4">Questions about importing a 2021 Leaf E+ G</h2>
-            <dl class="space-y-4">
-              <div>
-                <dt class="text-sm font-semibold text-slate-900 mb-1">What real-world range can I expect from a 2021 Leaf E+ G in NZ?</dt>
-                <dd class="text-base text-slate-800">The official WLTP figure is up to 385 km, but real-world range depends on battery SOH, driving style, terrain and climate. Many NZ drivers see less than the WLTP number in mixed use, so we talk through your routes and the likely range for the specific car you’re considering.</dd>
-              </div>
-              <div>
-                <dt class="text-sm font-semibold text-slate-900 mb-1">How much does it cost to import a 2021 Nissan Leaf E+ G?</dt>
-                <dd class="text-base text-slate-800">Most buyers land a 2021 Leaf E+ G between about $32,000 and $42,000, depending on mileage, grade and options. The total includes the auction price, our fee, inland transport in Japan, shipping, insurance, NZ port charges, compliance work and on-road costs.</dd>
-              </div>
-              <div>
-                <dt class="text-sm font-semibold text-slate-900 mb-1">Will my Leaf E+ G meet NZ compliance and WoF requirements?</dt>
-                <dd class="text-base text-slate-800">A 2021 Leaf E+ G in standard condition typically meets NZ entry standards and can go on to get a WoF once any required work is done. We can’t promise a specific car will pass before inspection, but we use the auction sheet and photos to avoid obvious compliance risks.</dd>
-              </div>
-              <div>
-                <dt class="text-sm font-semibold text-slate-900 mb-1">How long does it take from winning an auction to driving the car in NZ?</dt>
-                <dd class="text-base text-slate-800">From a successful bid, shipping to NZ usually takes around 2–4 weeks depending on the sailing schedule. Allow extra time for port processing, entry certification, any compliance repairs and registration, so overall you’re often looking at roughly 6–10 weeks.</dd>
-              </div>
-              <div>
-                <dt class="text-sm font-semibold text-slate-900 mb-1">What auction grade should I look for on a 2021 Leaf E+ G?</dt>
-                <dd class="text-base text-slate-800">Many buyers aim for grades around 4 or better with a clean interior grade, but the right choice depends on budget and how fussy you are about cosmetic marks. We explain what each grade and note means, share the documentation and photos, and give our view on condition before you decide to bid.</dd>
-              </div>
-            </dl>
-          </div>
-          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 sm:p-5">
-            <h3 class="text-lg font-semibold mb-2">Stay in the loop</h3>
-            <p class="text-sm text-slate-700 mb-3">Get updates on Leaf E+ G auction listings, EV import tips and typical landed pricing so you can move when the right car appears.</p>
-            <form class="space-y-3" x-data="leadForm('subscribe')" @submit.prevent="handleSubmit">
-              <div>
-                <label class="block text-sm font-medium text-slate-800 mb-1" for="email-sub">Email</label>
-                <input id="email-sub" name="email" type="email" required class="w-full rounded-md border border-slate-300 px-3 py-2 text-base" />
-              </div>
-              <input type="hidden" name="landing_id" value="233a9539-a11b-4c0b-8bdf-2da2390c183f" />
-              <input type="hidden" name="landing_slug" value="2021-nissan-leaf-e-plus-g-import-nz" />
-              <input type="hidden" name="form_variant" :value="variant" />
-              <input type="hidden" name="utm_source" x-model="utms.utm_source" />
-              <input type="hidden" name="utm_medium" x-model="utms.utm_medium" />
-              <input type="hidden" name="utm_campaign" x-model="utms.utm_campaign" />
-              <input type="hidden" name="utm_term" x-model="utms.utm_term" />
-              <input type="hidden" name="utm_content" x-model="utms.utm_content" />
-              <button type="submit" :disabled="submitting" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-blue-700 hover:bg-blue-800 text-white font-semibold text-base disabled:opacity-70 disabled:cursor-not-allowed">
-                <span x-show="!submitting">Subscribe</span>
-                <span x-show="submitting">Subscribing...</span>
-              </button>
-              <p class="text-xs text-slate-500 text-center">Occasional updates only. You can unsubscribe at any time.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-slate-900 text-slate-50">
-      <div class="max-w-5xl mx-auto px-4 py-8 sm:py-10 flex flex-col md:flex-row md:items-center gap-6">
-        <div class="flex-1">
-          <h2 class="text-xl sm:text-2xl font-bold mb-2">Ready to explore a 2021 Leaf E+ G from Japan?</h2>
-          <p class="text-base text-slate-100 mb-3">Tell us your budget, driving habits and must-have features, and we’ll come back with real 2021 Leaf E+ G options and landed pricing to compare with NZ listings.</p>
-        </div>
-        <div class="flex-1 max-w-md">
-          <a href="#lead-main" class="inline-flex w-full items-center justify-center px-4 py-3 rounded-md bg-blue-500 hover:bg-blue-400 text-white font-semibold text-base text-center">Let us calculate your weekly savings.</a>
-        </div>
-      </div>
-    </section>
+    <div class="my-12"><form data-lead="3" onsubmit="return iycSubmit(this)" class="rounded-3xl bg-white p-6 shadow"><h2 class="text-3xl font-bold">Find your car</h2><input class="mt-4 w-full border-b-2 p-3 text-lg" name="name" placeholder="Name" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="email" placeholder="Email" type="email" required><input class="mt-4 w-full border-b-2 p-3 text-lg" name="phone" placeholder="Phone" required><button class="mt-6 w-full rounded-xl bg-blue-700 px-6 py-4 text-lg font-bold text-white">Find My Car</button></form></div>
   </main>
 
-  <footer class="bg-slate-950 text-slate-200">
-    <div class="max-w-5xl mx-auto px-4 py-6 space-y-4">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <img src="https://raw.githubusercontent.com/kriksman/models/main/shared/assets/import-logo.png" alt="ImportYourCar.co.nz" class="h-7 w-auto" />
-          <div>
-            <p class="text-sm font-semibold">ImportYourCar.co.nz</p>
-            <p class="text-sm text-slate-400">Importing cars from Japan for NZ drivers since 2009.</p>
-          </div>
-        </div>
-        <div class="text-sm text-slate-400 space-y-1">
-          <p>ImportYourCar.co.nz is an NZ-based importer that’s been sourcing vehicles from Japan since 2009. We focus on everyday cars, EVs and practical family vehicles, using direct access to Japanese auctions. Our role is to help you understand the options, costs and risks so you can decide whether importing a car is right for you.</p>
-        </div>
-      </div>
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 border-t border-slate-800 pt-4">
-        <p class="text-xs text-slate-500">© <span x-text="new Date().getFullYear()"></span> ImportYourCar.co.nz. All rights reserved.</p>
-        <p class="text-xs text-slate-500">Information on this page is general in nature and not tailored to your circumstances.</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="bg-slate-950 p-10 text-white">Import Your Car</footer>
+  
+<script>
+function iycSubmit(form) {
+  var p = new URLSearchParams(window.location.search);
+  var payload = {
+    landing_id: "9bb6ab82-e634-45fa-98e5-58ef4e69212a",
+    slug: "2021-nissan-leaf-e-plus-g-import-nz",
+    car_label: "Nissan Leaf E+ G 2021",
+    page_url: window.location.href,
+    name: form.name && form.name.value,
+    email: form.email && form.email.value,
+    phone: form.phone && form.phone.value,
+    utm_source: p.get("utm_source"),
+    utm_medium: p.get("utm_medium"),
+    utm_campaign: p.get("utm_campaign"),
+    utm_content: p.get("utm_content"),
+    utm_term: p.get("utm_term")
+  };
 
-  <script>
-    function headerScroll() {
-      return {
-        lastY: window.scrollY,
-        scrollingDown: false,
-        init() {
-          window.addEventListener('scroll', () => {
-            const y = window.scrollY;
-            this.scrollingDown = y > this.lastY && y > 40;
-            this.lastY = y;
-          });
-        }
-      };
-    }
-
-    function landingPage() {
-      return {
-        utms: {
-          utm_source: '',
-          utm_medium: '',
-          utm_campaign: '',
-          utm_term: '',
-          utm_content: ''
-        },
-        init() {
-          const params = new URLSearchParams(window.location.search);
-          this.utms.utm_source = params.get('utm_source') || '';
-          this.utms.utm_medium = params.get('utm_medium') || '';
-          this.utms.utm_campaign = params.get('utm_campaign') || '';
-          this.utms.utm_term = params.get('utm_term') || '';
-          this.utms.utm_content = params.get('utm_content') || '';
-        }
-      };
-    }
-
-    function leadForm(variant) {
-      return {
-        variant,
-        submitting: false,
-        utms: Alpine.store('utms') || { utm_source: '', utm_medium: '', utm_campaign: '', utm_term: '', utm_content: '' },
-        async handleSubmit(event) {
-          if (this.submitting) return;
-          this.submitting = true;
-          const form = event.target;
-          const formData = new FormData(form);
-          formData.append('form_variant_runtime', this.variant);
-          const searchParams = new URLSearchParams(window.location.search);
-          try {
-            await fetch('https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed', {
-              method: 'POST',
-              body: formData
-            });
-          } catch (e) {
-          }
-          const redirectUrl = new URL('https://importyourcar.co.nz/application-import1775120657490');
-          searchParams.forEach((value, key) => {
-            redirectUrl.searchParams.set(key, value);
-          });
-          window.location.href = redirectUrl.toString();
-        }
-      };
-    }
-
-    document.addEventListener('alpine:init', () => {
-      const params = new URLSearchParams(window.location.search);
-      Alpine.store('utms', {
-        utm_source: params.get('utm_source') || '',
-        utm_medium: params.get('utm_medium') || '',
-        utm_campaign: params.get('utm_campaign') || '',
-        utm_term: params.get('utm_term') || '',
-        utm_content: params.get('utm_content') || ''
-      });
+  try {
+    fetch("https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
     });
-  </script>
+  } catch(e) {}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Nissan Leaf E+ G 2021",
-    "description": "Import a 2021 Nissan Leaf E+ G to NZ with verified battery SOH, up to 385 km range and clear pricing on shipping and compliance.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Nissan"
-    },
-    "model": "Leaf E+ G",
-    "vehicleModelDate": "2021",
-    "url": "https://importyourcar.co.nz/2021-nissan-leaf-e-plus-g-import-nz",
-    "image": [
-      "https://raw.githubusercontent.com/kriksman/models/main/img/2021-nissan-leaf-e-plus-g-import-nz/2021-nissan-leaf-e-plus-g-import-nz-hero-exterior-front.jpg"
-    ],
-    "category": "Vehicle",
-    "additionalProperty": [
-      {"@type":"PropertyValue","name":"Battery capacity","value":"62 kWh"},
-      {"@type":"PropertyValue","name":"WLTP range","value":"up to 385 km"},
-      {"@type":"PropertyValue","name":"Power","value":"160 kW"}
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "NZD",
-      "lowPrice": "32000",
-      "highPrice": "42000",
-      "availability": "https://schema.org/PreOrder"
-    },
-    "seller": {
-      "@type": "Organization",
-      "name": "ImportYourCar.co.nz",
-      "url": "https://importyourcar.co.nz",
-      "logo": "https://raw.githubusercontent.com/kriksman/models/main/shared/assets/import-logo.png",
-      "areaServed": {
-        "@type": "Country",
-        "name": "New Zealand"
-      }
-    }
-  }
-  </script>
+  window.location.href = "https://importyourcar.co.nz/application-import1775120657490" + window.location.search;
+  return false;
+}
+
+var lastY = 0;
+window.addEventListener("scroll", function() {
+  var h = document.getElementById("iycHeader");
+  var hide = window.scrollY > lastY && window.scrollY > 120;
+  if (h) h.style.transform = hide ? "translateY(-110%)" : "translateY(0)";
+  lastY = window.scrollY;
+});
+</script>
 </body>
 </html>
