@@ -1,54 +1,6 @@
 {
-  "landing_id": "233a9539-a11b-4c0b-8bdf-2da2390c183f",
+  "landing_id": "9bb6ab82-e634-45fa-98e5-58ef4e69212a",
   "slug": "2021-nissan-leaf-e-plus-g-import-nz",
   "public_url": "https://importyourcar.co.nz/2021-nissan-leaf-e-plus-g-import-nz",
-  "theme": "theme-light-blue",
-  "meta": {
-    "title": "2021 Nissan Leaf E+ G import to NZ",
-    "description": "Import a 2021 Nissan Leaf E+ G to NZ with verified battery SOH, up to 385 km range and clear pricing on shipping and compliance.",
-    "robots": "noindex,nofollow"
-  },
-  "car": {
-    "make": "Nissan",
-    "model": "Leaf E+ G",
-    "year": 2021,
-    "label": "Nissan Leaf E+ G 2021",
-    "type": "Hybrid",
-    "is_ev": false,
-    "is_phev": false,
-    "is_hybrid": true,
-    "is_van": false
-  },
-  "forms": [
-    {
-      "id": "lead-main",
-      "variant": "main",
-      "webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
-      "redirect_url": "https://importyourcar.co.nz/application-import1775120657490"
-    },
-    {
-      "id": "lead-persona",
-      "variant": "persona",
-      "webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
-      "redirect_url": "https://importyourcar.co.nz/application-import1775120657490"
-    },
-    {
-      "id": "lead-mid-cta",
-      "variant": "mid-cta",
-      "webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
-      "redirect_url": "https://importyourcar.co.nz/application-import1775120657490"
-    },
-    {
-      "id": "lead-risks",
-      "variant": "risks",
-      "webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
-      "redirect_url": "https://importyourcar.co.nz/application-import1775120657490"
-    },
-    {
-      "id": "lead-subscribe",
-      "variant": "subscribe",
-      "webhook_url": "https://n8n-iux9.srv1520814.hstgr.cloud/webhook-test/signed",
-      "redirect_url": "https://importyourcar.co.nz/application-import1775120657490"
-    }
-  ]
+  "fallback": true
 }
