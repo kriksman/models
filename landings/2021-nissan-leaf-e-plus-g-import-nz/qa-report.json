@@ -1,11 +1,8 @@
 {
   "passed": true,
   "issues": [],
-  "warnings": [
-    "text-xs detected. Make sure it is not used for main body copy."
-  ],
-  "form_count": 5,
+  "form_count": 3,
   "approved_images_available": 15,
   "approved_images_used": 9,
-  "checked_at": "2026-05-04T13:03:14.928Z"
+  "checked_at": "2026-05-06T06:47:59.720Z"
 }
