@@ -1,7 +1,10 @@
 {
-  "landing_id": "a972f6f0-ded3-4204-84c6-fa5c40ea2e1a",
+  "landing_id": "2c7723c4-1c84-42f6-9db3-a902961d40b5",
   "slug": "2021-nissan-leaf-e-plus-g-import-nz",
   "public_url": "https://importyourcar.co.nz/2021-nissan-leaf-e-plus-g-import-nz",
+  "page_scope": "single_model",
+  "city": "NZ-wide",
+  "vehicle_type": "unknown",
   "theme": "theme-light-blue",
   "status": "unpublished",
   "index_status": "noindex",
@@ -12,6 +15,11 @@
     "savings",
     "usp",
     "specs",
+    "conditional_vehicle_blocks",
+    "city_use_case",
+    "landed_cost",
+    "auction_checklist",
+    "alternatives",
     "persona",
     "trust",
     "process",
@@ -21,6 +29,7 @@
     "gallery",
     "reviews",
     "faq",
+    "subscription",
     "footer_cta",
     "footer"
   ]
