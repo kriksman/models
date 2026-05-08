@@ -1,5 +1,5 @@
 {
-  "landing_id": "b9ee7403-895b-450a-8ae3-1e361e2119b1",
+  "landing_id": "da2ba818-08cf-492e-9c54-0ca828fbe6f3",
   "slug": "mercedes-eqe-350-amg-line-2024-import-nz",
   "public_url": "https://importyourcar.co.nz/mercedes-eqe-350-amg-line-2024-import-nz",
   "canonical_url": "https://importyourcar.co.nz/mercedes-eqe-350-amg-line-2024-import-nz",
@@ -9,7 +9,8 @@
   "html_path": "landings/mercedes-eqe-350-amg-line-2024-import-nz/index.html",
   "page_scope": "single_model",
   "city": "NZ-wide",
-  "vehicle_type": "phev",
+  "vehicle_type": "ev",
+  "design_direction": {},
   "theme": "theme-light-blue",
   "status": "unpublished",
   "index_status": "noindex",
