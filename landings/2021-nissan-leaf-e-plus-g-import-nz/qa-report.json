@@ -1,11 +1,9 @@
 {
-  "passed": false,
-  "issues": [
-    "Missing process step: Tell us what you're after"
-  ],
+  "passed": true,
+  "issues": [],
   "form_count": 4,
-  "approved_images_available": 15,
+  "approved_images_available": 12,
   "approved_images_used": 12,
-  "html_length": 52997,
-  "checked_at": "2026-05-07T14:05:51.272Z"
+  "html_length": 42548,
+  "checked_at": "2026-05-08T02:06:02.494Z"
 }
