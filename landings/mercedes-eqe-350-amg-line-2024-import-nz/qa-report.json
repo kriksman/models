@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "issues": [],
+  "form_count": 4,
+  "approved_images_available": 12,
+  "approved_images_used": 12,
+  "images_source": "bot3_payload",
+  "payload_approved_images_count": 12,
+  "db_approved_images_count": 12,
+  "rejected_images_count": 0,
+  "html_length": 54569,
+  "checked_at": "2026-05-09T09:00:11.566Z"
+}
