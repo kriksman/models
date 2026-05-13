@@ -1,0 +1,60 @@
+{
+  "landing_id": "ef5d85ab-a752-4448-8348-261cec4f642e",
+  "slug": "toyota-prius-2025-import-nz",
+  "public_url": "https://importyourcar.co.nz/toyota-prius-2025-import-nz",
+  "canonical_url": "https://importyourcar.co.nz/toyota-prius-2025-import-nz",
+  "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/toyota-prius-2025-import-nz/toyota-prius-2025-import-nz-hero-exterior-front.jpg",
+  "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+  "github_path": "landings/toyota-prius-2025-import-nz/index.html",
+  "html_path": "landings/toyota-prius-2025-import-nz/index.html",
+  "page_scope": "single_model",
+  "city": "NZ-wide",
+  "vehicle_type": "petrol",
+  "design_direction": {
+    "design_seed": "toyota-prius-2025-petrol-single-model-nz-wide",
+    "page_mood": "trusted-import",
+    "visual_style": "clean-practical",
+    "layout_rhythm": "alternating",
+    "image_treatment": "soft-offset-mix",
+    "accent_style": "clear-trust",
+    "hero_style": "full-bleed",
+    "density": "medium",
+    "section_variation": [
+      "full-bleed-hero",
+      "asymmetric-feature",
+      "stat-band",
+      "editorial-gallery"
+    ],
+    "avoid": [
+      "generic dealership layout",
+      "same card grid every section",
+      "internal workflow wording"
+    ]
+  },
+  "theme": "theme-light-blue",
+  "status": "unpublished",
+  "index_status": "noindex",
+  "sections_rendered": [
+    "hero",
+    "forms",
+    "why",
+    "savings",
+    "usp",
+    "city_use_case",
+    "landed_cost",
+    "auction_checklist",
+    "alternatives",
+    "persona",
+    "trust",
+    "process",
+    "comparison",
+    "risks",
+    "how_to_use",
+    "gallery",
+    "reviews",
+    "faq",
+    "subscription",
+    "footer_cta",
+    "footer"
+  ]
+}
