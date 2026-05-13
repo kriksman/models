@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "issues": [],
+  "form_count": 4,
+  "approved_images_available": 9,
+  "approved_images_used": 9,
+  "images_source": "payload",
+  "payload_approved_images_count": 9,
+  "db_approved_images_count": 9,
+  "rejected_images_count": 0,
+  "html_length": 49591,
+  "checked_at": "2026-05-13T14:02:20.990Z"
+}
