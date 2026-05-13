@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "issues": [
+    "Used DB image fallback despite current approved payload being available."
+  ],
+  "form_count": 4,
+  "approved_images_available": 11,
+  "approved_images_used": 11,
+  "images_source": "db_fresh",
+  "payload_approved_images_count": 11,
+  "db_approved_images_count": 11,
+  "rejected_images_count": 0,
+  "html_length": 51224,
+  "checked_at": "2026-05-13T02:39:47.594Z"
+}
