@@ -1,0 +1,60 @@
+{
+  "landing_id": "a9d2fff0-9799-455d-9b66-7d0ba873e1c0",
+  "slug": "toyota-alphard-2018-import-nz",
+  "public_url": "https://importyourcar.co.nz/toyota-alphard-2018-import-nz",
+  "canonical_url": "https://importyourcar.co.nz/toyota-alphard-2018-import-nz",
+  "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/toyota-alphard-2018-import-nz/toyota-alphard-2018-import-nz-hero-exterior-front.jpg",
+  "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+  "github_path": "landings/toyota-alphard-2018-import-nz/index.html",
+  "html_path": "landings/toyota-alphard-2018-import-nz/index.html",
+  "page_scope": "single_model",
+  "city": "NZ-wide",
+  "vehicle_type": "ev",
+  "design_direction": {
+    "design_seed": "toyota-alphard-2018-petrol-single-model-nz-wide",
+    "page_mood": "family_practical",
+    "visual_style": "utility-clean",
+    "layout_rhythm": "alternating",
+    "image_treatment": "soft-offset-mix",
+    "accent_style": "clear-trust",
+    "hero_style": "full-bleed",
+    "density": "medium",
+    "section_variation": [
+      "full-bleed-hero",
+      "asymmetric-feature",
+      "stat-band",
+      "editorial-gallery"
+    ],
+    "avoid": [
+      "generic dealership layout",
+      "same card grid every section",
+      "internal workflow wording"
+    ]
+  },
+  "theme": "theme-light-blue",
+  "status": "unpublished",
+  "index_status": "noindex",
+  "sections_rendered": [
+    "hero",
+    "forms",
+    "why",
+    "savings",
+    "usp",
+    "city_use_case",
+    "landed_cost",
+    "auction_checklist",
+    "alternatives",
+    "persona",
+    "trust",
+    "process",
+    "comparison",
+    "risks",
+    "how_to_use",
+    "gallery",
+    "reviews",
+    "faq",
+    "subscription",
+    "footer_cta",
+    "footer"
+  ]
+}
