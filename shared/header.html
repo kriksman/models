@@ -1,1 +1,373 @@
-<header id="iycHeader" class="site-header fixed left-0 right-0 top-0 z-50 border-b backdrop-blur-xl"><div class="container flex items-center justify-between px-4 py-3"><a href="https://importyourcar.co.nz" class="flex items-center gap-3"><img src="https://raw.githubusercontent.com/kriksman/models/main/shared/assets/import-logo.png" class="h-12" alt="Import Your Car logo"><span class="hidden text-sm font-black md:inline">ImportYourCar.co.nz</span></a><nav class="hidden items-center gap-6 text-sm font-bold md:flex"><a href="#savings">Savings</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#lead-1" class="nav-cta rounded-xl px-4 py-2 font-black">Find My Car</a></nav></div></header>
+<style>
+  :root {
+    --nav-bg: #0d1b2a;
+    --nav-accent: #e8501a;
+    --nav-accent-hover: #ff6b35;
+    --nav-text: #e8edf2;
+    --nav-text-muted: #8fa3b8;
+    --nav-border: rgba(255,255,255,0.07);
+    --nav-link-hover-bg: rgba(232,80,26,0.12);
+    --contact-bg: #071220;
+    --transition: 0.22s ease;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* ── Wrapper ─────────────────────────────────────────── */
+  #siteHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
+                box-shadow 0.32s ease;
+    box-shadow: 0 2px 24px rgba(0,0,0,0.45);
+  }
+  #siteHeader.hidden {
+    transform: translateY(-100%);
+  }
+
+  /* ── Contact strip (top micro-bar) ───────────────────── */
+  #siteHeader .contact-strip {
+    background: var(--contact-bg);
+    border-bottom: 1px solid var(--nav-border);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0.42rem 2rem;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  #siteHeader .contact-strip a {
+    color: var(--nav-text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color var(--transition);
+    white-space: nowrap;
+  }
+  #siteHeader .contact-strip a:hover {
+    color: var(--nav-accent);
+  }
+  #siteHeader .contact-strip .cs-icon {
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  /* ── Main nav row ────────────────────────────────────── */
+  #siteHeader .nav-main {
+    background: var(--nav-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    gap: 1rem;
+    min-height: 64px;
+    border-bottom: 2px solid var(--nav-accent);
+  }
+
+  /* Logo */
+  #siteHeader .nav-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  #siteHeader .nav-logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+    filter: brightness(1.05);
+    transition: filter var(--transition), transform var(--transition);
+  }
+  #siteHeader .nav-logo img:hover {
+    filter: brightness(1.2);
+    transform: scale(1.03);
+  }
+
+  /* Desktop nav links */
+  #siteHeader .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  #siteHeader .nav-links li a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    display: block;
+    transition: background var(--transition), color var(--transition);
+    white-space: nowrap;
+  }
+  #siteHeader .nav-links li a:hover,
+  #siteHeader .nav-links li a:focus {
+    background: var(--nav-link-hover-bg);
+    color: var(--nav-accent);
+    outline: none;
+  }
+
+  /* CTA button */
+  #siteHeader .nav-links li.nav-cta a {
+    background: var(--nav-accent);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem 1.1rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 2px 12px rgba(232,80,26,0.35);
+    transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+  }
+  #siteHeader .nav-links li.nav-cta a:hover {
+    background: var(--nav-accent-hover);
+    box-shadow: 0 4px 20px rgba(232,80,26,0.5);
+    transform: translateY(-1px);
+    color: #fff;
+  }
+
+  /* Divider */
+  #siteHeader .nav-divider {
+    width: 1px;
+    height: 20px;
+    background: var(--nav-border);
+    margin: 0 0.4rem;
+    flex-shrink: 0;
+  }
+
+  /* ── Hamburger (mobile) ──────────────────────────────── */
+  #siteHeader .nav-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    transition: background var(--transition);
+  }
+  #siteHeader .nav-burger:hover { background: rgba(255,255,255,0.08); }
+  #siteHeader .nav-burger span {
+    display: block;
+    height: 2px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease, width 0.25s ease;
+    transform-origin: center;
+  }
+  #siteHeader .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #siteHeader .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  #siteHeader .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── Mobile drawer ───────────────────────────────────── */
+  #siteHeader .nav-drawer {
+    display: none;
+    flex-direction: column;
+    background: #0f2033;
+    border-top: 1px solid var(--nav-border);
+    padding: 0.5rem 1.5rem 1rem;
+    gap: 0.15rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.2s ease;
+  }
+  #siteHeader .nav-drawer.open {
+    max-height: 600px;
+    padding: 0.7rem 1.5rem 1.2rem;
+  }
+  #siteHeader .nav-drawer a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.7rem 0.5rem;
+    border-bottom: 1px solid var(--nav-border);
+    display: block;
+    transition: color var(--transition);
+    letter-spacing: 0.02em;
+  }
+  #siteHeader .nav-drawer a:last-child { border-bottom: none; }
+  #siteHeader .nav-drawer a:hover { color: var(--nav-accent); }
+  #siteHeader .nav-drawer .drawer-cta {
+    background: var(--nav-accent);
+    color: #fff !important;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 0.6rem;
+    border-bottom: none !important;
+    padding: 0.75rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 12px rgba(232,80,26,0.35);
+  }
+
+  /* ── Scroll progress bar ─────────────────────────────── */
+  #navProgress {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--nav-accent), #ff9a56);
+    transition: width 0.1s linear;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ── Mobile breakpoint ───────────────────────────────── */
+  @media (max-width: 860px) {
+    #siteHeader .nav-links,
+    #siteHeader .nav-divider { display: none; }
+    #siteHeader .nav-burger { display: flex; }
+    #siteHeader .nav-drawer { display: flex; }
+    #siteHeader .contact-strip {
+      justify-content: center;
+      font-size: 11px;
+      gap: 0.8rem;
+      padding: 0.4rem 1rem;
+    }
+    #siteHeader .nav-main { padding: 0 1rem; min-height: 56px; }
+  }
+
+  @media (max-width: 480px) {
+    #siteHeader .contact-strip { display: none; }
+  }
+</style>
+
+<header id="siteHeader">
+  <!-- Micro contact strip -->
+  <div class="contact-strip">
+    <a href="tel:+6421950789"><span class="cs-icon">📞</span> 021 950 789 <em style="opacity:.6">(Nick)</em></a>
+    <a href="tel:+64225958870"><span class="cs-icon">📞</span> 022 595 8870 <em style="opacity:.6">(Chris)</em></a>
+    <a href="tel:+64220288260"><span class="cs-icon">📞</span> 022 028 8260 <em style="opacity:.6">(Julian)</em></a>
+    <a href="mailto:info@importyourcar.co.nz"><span class="cs-icon">✉</span> info@importyourcar.co.nz</a>
+  </div>
+
+  <!-- Main nav -->
+  <div class="nav-main">
+    <!-- Logo -->
+    <a class="nav-logo" href="/">
+      <img src="https://importyourcar.co.nz/hosted/images/2e/d1de7218af4899b16f75badd7a0df1/IMPORT-LOGO-4-.png" alt="Import Your Car">
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="https://importyourcar.co.nz/blog">About</a></li>
+      <li><a href="https://importyourcar.co.nz/faq">Q&amp;A</a></li>
+      <li><a href="https://importyourcar.co.nz/feedback">Reviews</a></li>
+      <li><a href="https://importyourcar.co.nz/recently-bought-cars">Imported Cars</a></li>
+      <li><a href="https://importyourcar.co.nz/electric-cars-import-japan-nz">EVs</a></li>
+      <li><a href="https://importyourcar.co.nz/import-nissan-leaf-from-japan-to-nz">LEAF</a></li>
+      <li><a href="https://importyourcar.co.nz/toyota-land-cruiser-import-nz">Cruiser</a></li>
+      <li><a href="https://importyourcar.co.nz/finance">Finance</a></li>
+      <div class="nav-divider"></div>
+      <li><a href="https://importyourcar.co.nz/fun-page36686671">Facebook</a></li>
+      <li><a href="https://www.trademe.co.nz/a/services/trades/automotive/listing/736092842">Trade Me</a></li>
+      <div class="nav-divider"></div>
+      <li><a href="https://importyourcar.co.nz/contact-us">Contact</a></li>
+      <li class="nav-cta"><a href="https://importyourcar.co.nz/apply-online">Register Now</a></li>
+    </ul>
+
+    <!-- Mobile burger -->
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" id="navBurger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <nav class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <a href="https://importyourcar.co.nz/blog">About</a>
+    <a href="https://importyourcar.co.nz/faq">Q&amp;A</a>
+    <a href="https://importyourcar.co.nz/feedback">Reviews</a>
+    <a href="https://importyourcar.co.nz/recently-bought-cars">Imported Cars</a>
+    <a href="https://importyourcar.co.nz/electric-cars-import-japan-nz">EVs</a>
+    <a href="https://importyourcar.co.nz/import-nissan-leaf-from-japan-to-nz">LEAF</a>
+    <a href="https://importyourcar.co.nz/toyota-land-cruiser-import-nz">Cruiser</a>
+    <a href="https://importyourcar.co.nz/finance">Finance</a>
+    <a href="https://importyourcar.co.nz/fun-page36686671">Facebook</a>
+    <a href="https://www.trademe.co.nz/a/services/trades/automotive/listing/736092842">Trade Me</a>
+    <a href="https://importyourcar.co.nz/contact-us">Contact</a>
+    <a class="drawer-cta" href="https://importyourcar.co.nz/apply-online">Register Now →</a>
+  </nav>
+
+  <!-- Scroll progress indicator -->
+  <div id="navProgress"></div>
+</header>
+
+<script>
+(function () {
+  const header   = document.getElementById('siteHeader');
+  const burger   = document.getElementById('navBurger');
+  const drawer   = document.getElementById('navDrawer');
+  const progress = document.getElementById('navProgress');
+  let prevY = window.scrollY || 0;
+  let ticking = false;
+
+  // ── Auto-hide on scroll ──────────────────────────────
+  function handleScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      const y = window.scrollY || 0;
+
+      // Progress bar
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = docH > 0 ? (y / docH * 100) + '%' : '0%';
+
+      // Show/hide header
+      if (y <= 0) {
+        header.classList.remove('hidden');
+      } else if (y > prevY + 4) {
+        header.classList.add('hidden');
+        // Close drawer when hiding
+        closeDrawer();
+      } else if (y < prevY - 4) {
+        header.classList.remove('hidden');
+      }
+      prevY = y;
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // ── Burger toggle ────────────────────────────────────
+  function openDrawer() {
+    drawer.classList.add('open');
+    burger.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  burger.addEventListener('click', function () {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+
+  // Close drawer when clicking a link inside it
+  drawer.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeDrawer);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+})();
+</script>
