@@ -1,0 +1,63 @@
+{
+  "landing_id": "96e21423-2c84-4130-87df-2694e67b9bb8",
+  "slug": "nissan-leaf-2024-import-nz",
+  "public_url": "https://importyourcar.co.nz/nissan-leaf-2024-import-nz",
+  "canonical_url": "https://importyourcar.co.nz/nissan-leaf-2024-import-nz",
+  "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/nissan-leaf-2024-import-nz/nissan-leaf-2024-import-nz-hero-exterior-dynamic.jpg",
+  "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+  "github_path": "landings/nissan-leaf-2024-import-nz/index.html",
+  "html_path": "landings/nissan-leaf-2024-import-nz/index.html",
+  "page_scope": "single_model",
+  "city": "NZ-wide",
+  "vehicle_type": "ev",
+  "design_direction": {
+    "design_seed": "nissan-leaf-2024-ev-single-model-nz-wide",
+    "page_mood": "premium-ev",
+    "visual_style": "clean-luxury",
+    "layout_rhythm": "editorial",
+    "image_treatment": "glass-circle-mix",
+    "accent_style": "cool-tech",
+    "hero_style": "full-bleed",
+    "density": "medium",
+    "section_variation": [
+      "full-bleed-hero",
+      "asymmetric-feature",
+      "stat-band",
+      "editorial-gallery"
+    ],
+    "avoid": [
+      "generic dealership layout",
+      "same card grid every section",
+      "internal workflow wording"
+    ]
+  },
+  "theme": "theme-noir",
+  "renderer": "premium-template-v9",
+  "status": "unpublished",
+  "index_status": "noindex",
+  "sections_rendered": [
+    "hero",
+    "why_kiwis",
+    "usp",
+    "savings",
+    "landed_cost",
+    "lead_form",
+    "process",
+    "how_to_use",
+    "battery_health",
+    "charging",
+    "comparison",
+    "auction_checklist",
+    "risks",
+    "persona_fit",
+    "not_for_you",
+    "alternatives",
+    "cta_mid",
+    "persona_trust",
+    "gallery",
+    "reviews",
+    "faq",
+    "subscription",
+    "footer_cta"
+  ]
+}
