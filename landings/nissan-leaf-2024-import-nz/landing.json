@@ -1,5 +1,5 @@
 {
-  "landing_id": "96e21423-2c84-4130-87df-2694e67b9bb8",
+  "landing_id": "c5678ec6-2e9a-4b6a-bca9-2b4163fd0b32",
   "slug": "nissan-leaf-2024-import-nz",
   "public_url": "https://importyourcar.co.nz/nissan-leaf-2024-import-nz",
   "canonical_url": "https://importyourcar.co.nz/nissan-leaf-2024-import-nz",
@@ -12,7 +12,7 @@
   "vehicle_type": "ev",
   "design_direction": {
     "design_seed": "nissan-leaf-2024-ev-single-model-nz-wide",
-    "page_mood": "premium-ev",
+    "page_mood": "premium_ev",
     "visual_style": "clean-luxury",
     "layout_rhythm": "editorial",
     "image_treatment": "glass-circle-mix",
