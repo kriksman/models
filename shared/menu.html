@@ -36,6 +36,12 @@
     transform: translateY(-100%);
   }
 
+  #siteHeader .nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   /* ── Contact strip (top micro-bar) ───────────────────── */
   #siteHeader .contact-strip {
     background: var(--contact-bg);
@@ -177,6 +183,9 @@
   #siteHeader .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   #siteHeader .nav-burger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   #siteHeader .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  #siteHeader .nav-toggle:checked ~ .nav-main .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #siteHeader .nav-toggle:checked ~ .nav-main .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  #siteHeader .nav-toggle:checked ~ .nav-main .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   /* ── Mobile drawer ───────────────────────────────────── */
   #siteHeader .nav-drawer {
@@ -191,6 +200,10 @@
     transition: max-height 0.35s ease, padding 0.2s ease;
   }
   #siteHeader .nav-drawer.open {
+    max-height: 600px;
+    padding: 0.7rem 1.5rem 1.2rem;
+  }
+  #siteHeader .nav-toggle:checked ~ .nav-drawer {
     max-height: 600px;
     padding: 0.7rem 1.5rem 1.2rem;
   }
@@ -253,6 +266,8 @@
 </style>
 
 <header id="siteHeader">
+  <input class="nav-toggle" type="checkbox" id="navToggle" aria-hidden="true" tabindex="-1">
+
   <!-- Micro contact strip -->
   <div class="contact-strip">
     <a href="tel:+6421950789"><span class="cs-icon">📞</span> 021 950 789 <em style="opacity:.6">(Nick)</em></a>
@@ -287,9 +302,9 @@
     </ul>
 
     <!-- Mobile burger -->
-    <button class="nav-burger" aria-label="Open menu" aria-expanded="false" id="navBurger">
+    <label class="nav-burger" aria-label="Open menu" aria-expanded="false" id="navBurger" for="navToggle" role="button" tabindex="0">
       <span></span><span></span><span></span>
-    </button>
+    </label>
   </div>
 
   <!-- Mobile drawer -->
@@ -318,6 +333,7 @@
   const burger   = document.getElementById('navBurger');
   const drawer   = document.getElementById('navDrawer');
   const progress = document.getElementById('navProgress');
+  const toggle   = document.getElementById('navToggle');
   let prevY = window.scrollY || 0;
   let ticking = false;
 
@@ -353,18 +369,34 @@
   function openDrawer() {
     drawer.classList.add('open');
     burger.classList.add('open');
+    if (toggle) toggle.checked = true;
     burger.setAttribute('aria-expanded', 'true');
     drawer.setAttribute('aria-hidden', 'false');
   }
   function closeDrawer() {
     drawer.classList.remove('open');
     burger.classList.remove('open');
+    if (toggle) toggle.checked = false;
     burger.setAttribute('aria-expanded', 'false');
     drawer.setAttribute('aria-hidden', 'true');
   }
 
-  burger.addEventListener('click', function () {
-    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  if (toggle) {
+    toggle.addEventListener('change', function () {
+      toggle.checked ? openDrawer() : closeDrawer();
+    });
+  } else {
+    burger.addEventListener('click', function () {
+      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    });
+  }
+
+  burger.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle.checked = !toggle.checked;
+      toggle.dispatchEvent(new Event('change'));
+    }
   });
 
   // Close drawer when clicking a link inside it
