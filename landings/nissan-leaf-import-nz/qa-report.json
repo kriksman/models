@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "issues": [],
+  "form_count": 3,
+  "approved_images_available": 11,
+  "approved_images_used": 11,
+  "images_source": "payload",
+  "payload_approved_images_count": 11,
+  "db_approved_images_count": 11,
+  "rejected_images_count": 0,
+  "html_length": 59713,
+  "theme": "theme-noir",
+  "renderer": "premium-template-v9",
+  "checked_at": "2026-06-16T07:49:54.882Z"
+}
