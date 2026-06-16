@@ -197,14 +197,17 @@
     gap: 0.15rem;
     max-height: 0;
     overflow: hidden;
+    overscroll-behavior: contain;
     transition: max-height 0.35s ease, padding 0.2s ease;
   }
   #siteHeader .nav-drawer.open {
-    max-height: 600px;
+    max-height: min(760px, calc(100svh - 96px));
+    overflow-y: auto;
     padding: 0.7rem 1.5rem 1.2rem;
   }
   #siteHeader .nav-toggle:checked ~ .nav-drawer {
-    max-height: 600px;
+    max-height: min(760px, calc(100svh - 96px));
+    overflow-y: auto;
     padding: 0.7rem 1.5rem 1.2rem;
   }
   #siteHeader .nav-drawer a {
@@ -262,6 +265,10 @@
 
   @media (max-width: 480px) {
     #siteHeader .contact-strip { display: none; }
+    #siteHeader .nav-drawer.open,
+    #siteHeader .nav-toggle:checked ~ .nav-drawer {
+      max-height: calc(100svh - 56px);
+    }
   }
 </style>
 
