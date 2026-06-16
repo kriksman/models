@@ -264,7 +264,15 @@
   }
 
   @media (max-width: 480px) {
-    #siteHeader .contact-strip { display: none; }
+    #siteHeader .contact-strip {
+      justify-content: center;
+      font-size: 10px;
+      gap: 0.6rem;
+      padding: 0.35rem 0.5rem;
+    }
+    #siteHeader .contact-strip a {
+      gap: 0.25rem;
+    }
     #siteHeader .nav-drawer.open,
     #siteHeader .nav-toggle:checked ~ .nav-drawer {
       max-height: calc(100svh - 56px);
