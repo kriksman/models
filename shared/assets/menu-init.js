@@ -19,10 +19,12 @@
 
   function showHeader() {
     header.classList.remove('hidden', 'nav-hidden');
+    header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
   function hideHeader() {
     header.classList.add('hidden', 'nav-hidden');
+    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
   }
 
   function getScrollTop(source) {
@@ -155,7 +157,7 @@
 
   window.addEventListener('wheel', function (e) {
     applyGestureDirection(e.deltaY || 0);
-  }, { passive: true });
+  }, { passive: true, capture: true });
 
   window.addEventListener('touchstart', function (e) {
     touchY = e.touches && e.touches.length ? e.touches[0].clientY : null;
@@ -166,7 +168,7 @@
     var nextTouchY = e.touches[0].clientY;
     applyGestureDirection(touchY - nextTouchY);
     touchY = nextTouchY;
-  }, { passive: true });
+  }, { passive: true, capture: true });
 
   if (toggle) {
     toggle.addEventListener('change', function () {
