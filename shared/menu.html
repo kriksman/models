@@ -32,7 +32,7 @@
                 box-shadow 0.32s ease;
     box-shadow: 0 2px 24px rgba(10,45,82,0.26);
   }
-  #siteHeader.hidden {
+  #siteHeader.nav-hidden {
     transform: translateY(-100%);
   }
 
@@ -379,36 +379,134 @@
   const toggle   = document.getElementById('navToggle');
   const hideAfter = 90;
   const revealDelta = 10;
-  let prevY = window.pageYOffset || document.documentElement.scrollTop || 0;
+  const scrollSources = new Set();
+  let activeScrollSource = window;
+  let prevY = getScrollTop(activeScrollSource);
+  let gestureOffset = prevY;
+  let touchY = null;
   let ticking = false;
 
   // ── Auto-hide on scroll ──────────────────────────────
-  function handleScroll() {
+  function getScrollTop(source) {
+    if (
+      source &&
+      source !== window &&
+      source !== document &&
+      source !== document.documentElement &&
+      source !== document.body &&
+      source.scrollTop !== undefined
+    ) {
+      return Math.max(0, source.scrollTop || 0);
+    }
+
+    return Math.max(
+      0,
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0
+    );
+  }
+
+  function getScrollableHeight(source) {
+    if (
+      source &&
+      source !== window &&
+      source !== document &&
+      source !== document.documentElement &&
+      source !== document.body &&
+      source.scrollHeight !== undefined
+    ) {
+      return Math.max(0, source.scrollHeight - source.clientHeight);
+    }
+
+    return Math.max(
+      0,
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight
+    ) - window.innerHeight;
+  }
+
+  function handleScroll(e) {
+    activeScrollSource = e && e.currentTarget ? e.currentTarget : activeScrollSource;
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      const y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+      const y = getScrollTop(activeScrollSource);
       const delta = y - prevY;
 
       // Progress bar
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      progress.style.width = docH > 0 ? (y / docH * 100) + '%' : '0%';
+      const scrollableHeight = getScrollableHeight(activeScrollSource);
+      progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
 
       // Show/hide header
       if (y <= hideAfter) {
-        header.classList.remove('hidden');
+        header.classList.remove('nav-hidden');
+        gestureOffset = y;
       } else if (delta > revealDelta) {
-        header.classList.add('hidden');
+        header.classList.add('nav-hidden');
         closeDrawer();
       } else if (delta < -revealDelta) {
-        header.classList.remove('hidden');
+        header.classList.remove('nav-hidden');
       }
       prevY = y;
       ticking = false;
     });
   }
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  function applyGestureDirection(delta) {
+    const y = getScrollTop(activeScrollSource);
+
+    if (delta > revealDelta) {
+      gestureOffset += delta;
+      if (y > hideAfter || gestureOffset > hideAfter) {
+        header.classList.add('nav-hidden');
+        closeDrawer();
+      }
+    } else if (delta < -revealDelta) {
+      gestureOffset = Math.max(0, gestureOffset + delta);
+      header.classList.remove('nav-hidden');
+    }
+  }
+
+  function addScrollSource(source) {
+    if (!source || scrollSources.has(source)) return;
+    scrollSources.add(source);
+    source.addEventListener('scroll', handleScroll, { passive: true });
+  }
+
+  function bindScrollSources() {
+    addScrollSource(window);
+    addScrollSource(document);
+    addScrollSource(document.documentElement);
+    addScrollSource(document.body);
+
+    document.querySelectorAll('*').forEach(function (el) {
+      const style = window.getComputedStyle(el);
+      const canScrollY = /(auto|scroll|overlay)/.test(style.overflowY);
+      if (canScrollY && el.scrollHeight > el.clientHeight + 10) addScrollSource(el);
+    });
+  }
+
+  bindScrollSources();
+  document.addEventListener('DOMContentLoaded', bindScrollSources, { once: true });
+  window.addEventListener('load', bindScrollSources, { once: true });
+  window.setTimeout(bindScrollSources, 800);
+
+  window.addEventListener('wheel', function (e) {
+    applyGestureDirection(e.deltaY || 0);
+  }, { passive: true });
+
+  window.addEventListener('touchstart', function (e) {
+    touchY = e.touches && e.touches.length ? e.touches[0].clientY : null;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', function (e) {
+    if (!e.touches || !e.touches.length || touchY === null) return;
+    const nextTouchY = e.touches[0].clientY;
+    applyGestureDirection(touchY - nextTouchY);
+    touchY = nextTouchY;
+  }, { passive: true });
 
   // ── Burger toggle ────────────────────────────────────
   function openDrawer() {
