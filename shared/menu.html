@@ -551,8 +551,12 @@
   burger.addEventListener('keydown', function (e) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
-      toggle.checked = !toggle.checked;
-      toggle.dispatchEvent(new Event('change'));
+      if (toggle) {
+        toggle.checked = !toggle.checked;
+        toggle.dispatchEvent(new Event('change'));
+      } else {
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+      }
     }
   });
 
@@ -567,3 +571,4 @@
   });
 })();
 </script>
+<script src="/shared/assets/menu-init.js?v=20260617-scroll" defer></script>
