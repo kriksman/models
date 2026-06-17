@@ -4,11 +4,17 @@
 /shared/assets/header-scroll.js
   Content-Type: application/javascript; charset=utf-8
   X-Content-Type-Options: nosniff
+  Cache-Control: no-store, must-revalidate
 
 /shared/assets/header-scroll-any.js
   Content-Type: application/javascript; charset=utf-8
   X-Content-Type-Options: nosniff
+  Cache-Control: no-store, must-revalidate
 
 /shared/assets/menu-init.js
   Content-Type: application/javascript; charset=utf-8
   X-Content-Type-Options: nosniff
+  Cache-Control: no-store, must-revalidate
+
+/shared/menu.html
+  Cache-Control: no-store, must-revalidate
