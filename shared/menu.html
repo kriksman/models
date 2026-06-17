@@ -7,14 +7,14 @@
 -->
 <style>
   :root {
-    --nav-bg: #0d1b2a;
-    --nav-accent: #e8501a;
-    --nav-accent-hover: #ff6b35;
-    --nav-text: #e8edf2;
-    --nav-text-muted: #8fa3b8;
-    --nav-border: rgba(255,255,255,0.07);
-    --nav-link-hover-bg: rgba(232,80,26,0.12);
-    --contact-bg: #071220;
+    --nav-bg: #6faee8;
+    --nav-accent: #0b5fb3;
+    --nav-accent-hover: #084f96;
+    --nav-text: #ffffff;
+    --nav-text-muted: rgba(255,255,255,0.88);
+    --nav-border: rgba(255,255,255,0.28);
+    --nav-link-hover-bg: rgba(255,255,255,0.86);
+    --contact-bg: #579add;
     --transition: 0.22s ease;
   }
 
@@ -30,7 +30,7 @@
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     transition: transform 0.32s cubic-bezier(0.4,0,0.2,1),
                 box-shadow 0.32s ease;
-    box-shadow: 0 2px 24px rgba(0,0,0,0.45);
+    box-shadow: 0 2px 24px rgba(10,45,82,0.26);
   }
   #siteHeader.hidden {
     transform: translateY(-100%);
@@ -48,11 +48,18 @@
     border-bottom: 1px solid var(--nav-border);
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    gap: 1.4rem;
-    padding: 0.42rem 2rem;
+    align-items: stretch;
+    gap: 1.2rem;
+    padding: 0.55rem 2rem;
     font-size: 12px;
     flex-wrap: wrap;
+  }
+  #siteHeader .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.18rem;
+    line-height: 1.2;
   }
   #siteHeader .contact-strip a {
     color: var(--nav-text-muted);
@@ -66,9 +73,16 @@
   #siteHeader .contact-strip a:hover {
     color: var(--nav-accent);
   }
+  #siteHeader .contact-strip .contact-phone {
+    color: var(--nav-text);
+    font-weight: 700;
+  }
+  #siteHeader .contact-strip .contact-email {
+    font-size: 11.5px;
+  }
   #siteHeader .contact-strip .cs-icon {
     font-size: 11px;
-    opacity: 0.7;
+    opacity: 0.9;
   }
 
   /* ── Main nav row ────────────────────────────────────── */
@@ -79,8 +93,8 @@
     justify-content: space-between;
     padding: 0 2rem;
     gap: 1rem;
-    min-height: 64px;
-    border-bottom: 2px solid var(--nav-accent);
+    min-height: 104px;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
   }
 
   /* Logo */
@@ -90,10 +104,10 @@
     align-items: center;
   }
   #siteHeader .nav-logo img {
-    height: 44px;
+    height: 88px;
     width: auto;
     display: block;
-    filter: brightness(1.05);
+    filter: brightness(1.08);
     transition: filter var(--transition), transform var(--transition);
   }
   #siteHeader .nav-logo img:hover {
@@ -137,12 +151,12 @@
     margin-left: 0.5rem;
     font-weight: 700;
     letter-spacing: 0.04em;
-    box-shadow: 0 2px 12px rgba(232,80,26,0.35);
+    box-shadow: 0 2px 12px rgba(11,95,179,0.28);
     transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
   }
   #siteHeader .nav-links li.nav-cta a:hover {
     background: var(--nav-accent-hover);
-    box-shadow: 0 4px 20px rgba(232,80,26,0.5);
+    box-shadow: 0 4px 20px rgba(11,95,179,0.42);
     transform: translateY(-1px);
     color: #fff;
   }
@@ -171,7 +185,7 @@
     border-radius: 6px;
     transition: background var(--transition);
   }
-  #siteHeader .nav-burger:hover { background: rgba(255,255,255,0.08); }
+  #siteHeader .nav-burger:hover { background: rgba(255,255,255,0.18); }
   #siteHeader .nav-burger span {
     display: block;
     height: 2px;
@@ -191,7 +205,7 @@
   #siteHeader .nav-drawer {
     display: none;
     flex-direction: column;
-    background: #0f2033;
+    background: var(--nav-bg);
     border-top: 1px solid var(--nav-border);
     padding: 0.5rem 1.5rem 1rem;
     gap: 0.15rem;
@@ -232,7 +246,7 @@
     border-bottom: none !important;
     padding: 0.75rem !important;
     font-weight: 700 !important;
-    box-shadow: 0 2px 12px rgba(232,80,26,0.35);
+    box-shadow: 0 2px 12px rgba(11,95,179,0.28);
   }
 
   /* ── Scroll progress bar ─────────────────────────────── */
@@ -242,7 +256,7 @@
     left: 0;
     height: 2px;
     width: 0%;
-    background: linear-gradient(90deg, var(--nav-accent), #ff9a56);
+    background: linear-gradient(90deg, var(--nav-accent), #9fd0ff);
     transition: width 0.1s linear;
     z-index: 1;
     pointer-events: none;
@@ -260,7 +274,11 @@
       gap: 0.8rem;
       padding: 0.4rem 1rem;
     }
-    #siteHeader .nav-main { padding: 0 1rem; min-height: 56px; }
+    #siteHeader .contact-card {
+      align-items: center;
+    }
+    #siteHeader .nav-main { padding: 0 1rem; min-height: 88px; }
+    #siteHeader .nav-logo img { height: 72px; }
   }
 
   @media (max-width: 480px) {
@@ -275,8 +293,10 @@
     }
     #siteHeader .nav-drawer.open,
     #siteHeader .nav-toggle:checked ~ .nav-drawer {
-      max-height: calc(100svh - 56px);
+      max-height: calc(100svh - 72px);
     }
+    #siteHeader .nav-main { min-height: 76px; }
+    #siteHeader .nav-logo img { height: 62px; }
   }
 </style>
 
@@ -285,10 +305,18 @@
 
   <!-- Micro contact strip -->
   <div class="contact-strip">
-    <a href="tel:+64225958870"><span class="cs-icon">📞</span> 022 595 8870 <em style="opacity:.6">(Chris)</em></a>
-    <a href="tel:+64220288260"><span class="cs-icon">📞</span> 022 028 8260 <em style="opacity:.6">(Julian)</em></a>
-    <a href="tel:+6421950789"><span class="cs-icon">📞</span> 021 950 789 <em style="opacity:.6">(Nick)</em></a>
-    <a href="mailto:info@importyourcar.co.nz"><span class="cs-icon">✉</span> info@importyourcar.co.nz</a>
+    <div class="contact-card">
+      <a class="contact-phone" href="tel:+64225958870"><span class="cs-icon">📞</span> 022 595 8870 <em style="opacity:.75">(Chris)</em></a>
+      <a class="contact-email" href="mailto:chris@importyourcar.co.nz"><span class="cs-icon">✉</span> chris@importyourcar.co.nz</a>
+    </div>
+    <div class="contact-card">
+      <a class="contact-phone" href="tel:+64220288260"><span class="cs-icon">📞</span> 022 028 8260 <em style="opacity:.75">(Julian)</em></a>
+      <a class="contact-email" href="mailto:julian@importyourcar.co.nz"><span class="cs-icon">✉</span> julian@importyourcar.co.nz</a>
+    </div>
+    <div class="contact-card">
+      <a class="contact-phone" href="tel:+6421950789"><span class="cs-icon">📞</span> 021 950 789 <em style="opacity:.75">(Nick)</em></a>
+      <a class="contact-email" href="mailto:nick@importyourcar.co.nz"><span class="cs-icon">✉</span> nick@importyourcar.co.nz</a>
+    </div>
   </div>
 
   <!-- Main nav -->
@@ -349,7 +377,9 @@
   const drawer   = document.getElementById('navDrawer');
   const progress = document.getElementById('navProgress');
   const toggle   = document.getElementById('navToggle');
-  let prevY = window.scrollY || 0;
+  const hideAfter = 90;
+  const revealDelta = 10;
+  let prevY = window.pageYOffset || document.documentElement.scrollTop || 0;
   let ticking = false;
 
   // ── Auto-hide on scroll ──────────────────────────────
@@ -357,20 +387,20 @@
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      const y = window.scrollY || 0;
+      const y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0);
+      const delta = y - prevY;
 
       // Progress bar
       const docH = document.documentElement.scrollHeight - window.innerHeight;
       progress.style.width = docH > 0 ? (y / docH * 100) + '%' : '0%';
 
       // Show/hide header
-      if (y <= 0) {
+      if (y <= hideAfter) {
         header.classList.remove('hidden');
-      } else if (y > prevY + 4) {
+      } else if (delta > revealDelta) {
         header.classList.add('hidden');
-        // Close drawer when hiding
         closeDrawer();
-      } else if (y < prevY - 4) {
+      } else if (delta < -revealDelta) {
         header.classList.remove('hidden');
       }
       prevY = y;
