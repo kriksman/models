@@ -32,6 +32,7 @@
                 box-shadow 0.32s ease;
     box-shadow: 0 2px 24px rgba(10,45,82,0.26);
   }
+  #siteHeader.hidden,
   #siteHeader.nav-hidden {
     transform: translateY(-100%);
   }
@@ -377,6 +378,9 @@
   const drawer   = document.getElementById('navDrawer');
   const progress = document.getElementById('navProgress');
   const toggle   = document.getElementById('navToggle');
+  if (!header || !burger || !drawer || header.dataset.menuInit === 'done') return;
+  header.dataset.menuInit = 'done';
+
   const hideAfter = 90;
   const revealDelta = 10;
   const scrollSources = new Set();
@@ -387,6 +391,14 @@
   let ticking = false;
 
   // ── Auto-hide on scroll ──────────────────────────────
+  function showHeader() {
+    header.classList.remove('hidden', 'nav-hidden');
+  }
+
+  function hideHeader() {
+    header.classList.add('hidden', 'nav-hidden');
+  }
+
   function getScrollTop(source) {
     if (
       source &&
@@ -437,17 +449,19 @@
 
       // Progress bar
       const scrollableHeight = getScrollableHeight(activeScrollSource);
-      progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
+      if (progress) {
+        progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
+      }
 
       // Show/hide header
       if (y <= hideAfter) {
-        header.classList.remove('nav-hidden');
+        showHeader();
         gestureOffset = y;
       } else if (delta > revealDelta) {
-        header.classList.add('nav-hidden');
+        hideHeader();
         closeDrawer();
       } else if (delta < -revealDelta) {
-        header.classList.remove('nav-hidden');
+        showHeader();
       }
       prevY = y;
       ticking = false;
@@ -460,12 +474,12 @@
     if (delta > revealDelta) {
       gestureOffset += delta;
       if (y > hideAfter || gestureOffset > hideAfter) {
-        header.classList.add('nav-hidden');
+        hideHeader();
         closeDrawer();
       }
     } else if (delta < -revealDelta) {
       gestureOffset = Math.max(0, gestureOffset + delta);
-      header.classList.remove('nav-hidden');
+      showHeader();
     }
   }
 
