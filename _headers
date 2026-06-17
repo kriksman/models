@@ -5,6 +5,10 @@
   Content-Type: application/javascript; charset=utf-8
   X-Content-Type-Options: nosniff
 
+/shared/assets/header-scroll-any.js
+  Content-Type: application/javascript; charset=utf-8
+  X-Content-Type-Options: nosniff
+
 /shared/assets/menu-init.js
   Content-Type: application/javascript; charset=utf-8
   X-Content-Type-Options: nosniff
