@@ -11,12 +11,12 @@
   "city": "NZ-wide",
   "vehicle_type": "petrol",
   "design_direction": {
-    "design_seed": "mazda-mx-5-2025-petrol-single-model-nz-wide",
-    "page_mood": "family_practical",
-    "visual_style": "clean-practical",
+    "design_seed": "mazda-mx-5-roadster-rs-manual-2020-plus-import-nz",
+    "page_mood": "enthusiast_manual",
+    "visual_style": "driver-focused-editorial",
     "layout_rhythm": "alternating",
     "image_treatment": "soft-offset-mix",
-    "accent_style": "clear-trust",
+    "accent_style": "sports-trust",
     "hero_style": "full-bleed",
     "density": "medium",
     "section_variation": [
@@ -28,7 +28,9 @@
     "avoid": [
       "generic dealership layout",
       "same card grid every section",
-      "internal workflow wording"
+      "internal workflow wording",
+      "family-practical MX-5 positioning",
+      "automatic-first copy"
     ]
   },
   "theme": "theme-ember",
@@ -97,5 +99,12 @@
     "subscription",
     "footer_cta"
   ],
-  "menu_architecture": "inline-shared-menu-and-footer-loader"
+  "menu_architecture": "inline-shared-menu-and-footer-loader",
+  "primary_focus": "Mazda MX-5 Roadster RS Manual 2020+ from Japanese auctions",
+  "supporting_models": [
+    "Mazda MX-5 RF RS Manual 2020+",
+    "Mazda3 Fastback 2.0 Manual 2020+",
+    "Mazda3 Hatchback Manual 2020+",
+    "Mazda2 Sport Manual"
+  ]
 }

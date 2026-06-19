@@ -8,7 +8,7 @@
   "payload_approved_images_count": 8,
   "db_approved_images_count": 8,
   "rejected_images_count": 0,
-  "html_length": 59534,
+  "html_length": 54836,
   "theme": "theme-ember",
   "renderer": "premium-template-v9",
   "design_stack": [
@@ -45,5 +45,5 @@
     "modern CSS variables"
   ],
   "forbidden_stack_hits": [],
-  "checked_at": "2026-06-19T14:32:47.870Z"
+  "checked_at": "2026-06-19T14:44:38.721Z"
 }
