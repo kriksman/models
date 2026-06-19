@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "issues": [],
+  "form_count": 3,
+  "approved_images_available": 8,
+  "approved_images_used": 8,
+  "images_source": "payload",
+  "payload_approved_images_count": 8,
+  "db_approved_images_count": 8,
+  "rejected_images_count": 0,
+  "html_length": 59534,
+  "theme": "theme-ember",
+  "renderer": "premium-template-v9",
+  "design_stack": [
+    "Next.js",
+    "React",
+    "Tailwind CSS v4",
+    "shadcn/ui",
+    "Radix UI",
+    "Lucide React",
+    "Framer Motion",
+    "CSS variables",
+    "mobile-first responsive design"
+  ],
+  "forbidden_stack": [
+    "Bootstrap",
+    "jQuery",
+    "Material UI unless requested",
+    "Materialize",
+    "Font Awesome",
+    "Tailwind CSS v3 CDN",
+    "old CSS reset templates",
+    "inline random CSS",
+    "generic landing template"
+  ],
+  "quality_rules": [
+    "premium layout",
+    "clear CTA above the fold",
+    "responsive sections",
+    "no lorem ipsum",
+    "real conversion structure",
+    "accessibility labels",
+    "clean component structure",
+    "semantic HTML",
+    "modern CSS variables"
+  ],
+  "forbidden_stack_hits": [],
+  "checked_at": "2026-06-19T14:32:47.870Z"
+}
