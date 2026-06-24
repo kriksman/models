@@ -16,6 +16,15 @@
     return document.getElementById('siteHeader');
   }
 
+  function isDrawerOpen() {
+    var drawer = document.getElementById('navDrawer');
+    var toggle = document.getElementById('navToggle');
+    return !!(
+      (drawer && drawer.classList.contains('open')) ||
+      (toggle && toggle.checked)
+    );
+  }
+
   function getScrollTop(source) {
     if (
       source &&
@@ -78,6 +87,11 @@
   }
 
   function hideHeader(header) {
+    if (isDrawerOpen()) {
+      showHeader(header);
+      return;
+    }
+
     header.classList.add('header--hidden', 'hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
   }
@@ -100,6 +114,12 @@
     if (!header) return;
 
     updateProgress(y, source);
+
+    if (isDrawerOpen()) {
+      showHeader(header);
+      gestureY = Math.max(0, y);
+      return;
+    }
 
     if (y <= hiddenAfter && gestureY <= hiddenAfter) {
       showHeader(header);

@@ -17,12 +17,21 @@
   var touchY = null;
   var ticking = false;
 
+  function isDrawerOpen() {
+    return drawer.classList.contains('open') || (toggle && toggle.checked);
+  }
+
   function showHeader() {
     header.classList.remove('hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
   function hideHeader() {
+    if (isDrawerOpen()) {
+      showHeader();
+      return;
+    }
+
     header.classList.add('hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
   }
@@ -81,6 +90,13 @@
         progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
       }
 
+      if (isDrawerOpen()) {
+        showHeader();
+        prevY = y;
+        ticking = false;
+        return;
+      }
+
       if (y <= hideAfter) {
         showHeader();
         gestureOffset = y;
@@ -98,6 +114,11 @@
 
   function applyGestureDirection(delta) {
     var y = getScrollTop(activeScrollSource);
+
+    if (isDrawerOpen()) {
+      showHeader();
+      return;
+    }
 
     if (delta > revealDelta) {
       gestureOffset += delta;
