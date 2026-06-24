@@ -329,20 +329,45 @@
     padding: 0 16px;
     gap: 8px;
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    transition: max-height 0.5s var(--nav-ease), padding 0.34s var(--nav-ease);
+    pointer-events: none;
+    transform: translate3d(0,-10px,0);
+    visibility: hidden;
+    will-change: opacity, transform;
+    contain: layout paint style;
+    transition:
+      opacity 0.22s var(--nav-ease),
+      transform 0.28s var(--nav-ease),
+      visibility 0s linear 0.28s;
   }
   #siteHeader .nav-drawer.open {
     max-height: min(760px, calc(100svh - 118px));
+    opacity: 1;
     overflow-y: auto;
     padding: 16px 16px 18px;
+    pointer-events: auto;
+    transform: translate3d(0,0,0);
+    visibility: visible;
+    transition:
+      opacity 0.2s var(--nav-ease),
+      transform 0.26s var(--nav-ease),
+      visibility 0s linear 0s;
   }
   #siteHeader .nav-toggle:checked ~ .nav-drawer {
     max-height: min(760px, calc(100svh - 118px));
+    opacity: 1;
     overflow-y: auto;
     padding: 16px 16px 18px;
+    pointer-events: auto;
+    transform: translate3d(0,0,0);
+    visibility: visible;
+    transition:
+      opacity 0.2s var(--nav-ease),
+      transform 0.26s var(--nav-ease),
+      visibility 0s linear 0s;
   }
   #siteHeader .nav-drawer a {
     position: relative;
@@ -531,7 +556,7 @@
     alt=""
     aria-hidden="true"
     style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none"
-    onload="(function(d,w){if(w.__iycHeaderScrollImageBoot)return;w.__iycHeaderScrollImageBoot=1;var s=d.createElement('script');s.src='/shared/assets/header-scroll-any.js?v=20260624-lock';s.defer=true;d.head.appendChild(s);})(document,window)"
+    onload="(function(d,w){if(w.__iycHeaderScrollImageBoot)return;w.__iycHeaderScrollImageBoot=1;var s=d.createElement('script');s.src='/shared/assets/header-scroll-any.js?v=20260624-smooth2';s.defer=true;d.head.appendChild(s);})(document,window)"
   >
   <input class="nav-toggle" type="checkbox" id="navToggle" aria-hidden="true" tabindex="-1">
 
@@ -622,6 +647,7 @@
   let ticking = false;
   let scrollLocked = false;
   let lockedScrollY = 0;
+  let lockTouchY = null;
   let previousBodyStyles = null;
   let previousHtmlStyles = null;
 
@@ -653,12 +679,8 @@
 
     lockedScrollY = getScrollTop(window);
     previousBodyStyles = {
-      position: document.body.style.position,
-      top: document.body.style.top,
-      left: document.body.style.left,
-      right: document.body.style.right,
-      width: document.body.style.width,
-      overflow: document.body.style.overflow
+      overflow: document.body.style.overflow,
+      overscrollBehavior: document.body.style.overscrollBehavior
     };
     previousHtmlStyles = {
       overflow: document.documentElement.style.overflow,
@@ -669,12 +691,8 @@
     document.body.classList.add('iyc-nav-locked');
     document.documentElement.style.overflow = 'hidden';
     document.documentElement.style.overscrollBehavior = 'none';
-    document.body.style.position = 'fixed';
-    document.body.style.top = '-' + lockedScrollY + 'px';
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
     document.body.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'none';
     header.classList.add('menu-open');
     showHeader();
     scrollLocked = true;
@@ -687,12 +705,8 @@
     document.body.classList.remove('iyc-nav-locked');
 
     if (previousBodyStyles) {
-      document.body.style.position = previousBodyStyles.position;
-      document.body.style.top = previousBodyStyles.top;
-      document.body.style.left = previousBodyStyles.left;
-      document.body.style.right = previousBodyStyles.right;
-      document.body.style.width = previousBodyStyles.width;
       document.body.style.overflow = previousBodyStyles.overflow;
+      document.body.style.overscrollBehavior = previousBodyStyles.overscrollBehavior;
     }
     if (previousHtmlStyles) {
       document.documentElement.style.overflow = previousHtmlStyles.overflow;
@@ -704,6 +718,39 @@
     prevY = lockedScrollY;
     gestureOffset = lockedScrollY;
     scrollLocked = false;
+  }
+
+  function drawerCanScroll(deltaY) {
+    const maxScroll = Math.max(0, drawer.scrollHeight - drawer.clientHeight);
+    if (maxScroll <= 1) return false;
+    if (deltaY < 0) return drawer.scrollTop > 0;
+    return drawer.scrollTop < maxScroll - 1;
+  }
+
+  function shouldBlockPageScroll(target, deltaY) {
+    if (!isDrawerOpen()) return false;
+    if (!drawer.contains(target)) return true;
+    return !drawerCanScroll(deltaY);
+  }
+
+  function guardWheelScroll(event) {
+    if (!isDrawerOpen()) return;
+    showHeader();
+    if (shouldBlockPageScroll(event.target, event.deltaY || 0)) event.preventDefault();
+  }
+
+  function captureLockTouch(event) {
+    if (!event.touches || !event.touches.length) return;
+    lockTouchY = event.touches[0].clientY;
+  }
+
+  function guardTouchScroll(event) {
+    if (!isDrawerOpen() || !event.touches || !event.touches.length || lockTouchY === null) return;
+    const nextTouchY = event.touches[0].clientY;
+    const deltaY = lockTouchY - nextTouchY;
+    lockTouchY = nextTouchY;
+    showHeader();
+    if (shouldBlockPageScroll(event.target, deltaY)) event.preventDefault();
   }
 
   function getScrollTop(source) {
@@ -841,6 +888,10 @@
     touchY = nextTouchY;
   }, { passive: true, capture: true });
 
+  document.addEventListener('wheel', guardWheelScroll, { passive: false, capture: true });
+  document.addEventListener('touchstart', captureLockTouch, { passive: true, capture: true });
+  document.addEventListener('touchmove', guardTouchScroll, { passive: false, capture: true });
+
   // ── Burger toggle ────────────────────────────────────
   function openDrawer() {
     lockPageScroll();
@@ -893,5 +944,5 @@
   });
 })();
 </script>
-<script src="/shared/assets/menu-init.js?v=20260624-lock" defer></script>
-<script src="/shared/assets/header-scroll-any.js?v=20260624-lock" defer></script>
+<script src="/shared/assets/menu-init.js?v=20260624-smooth2" defer></script>
+<script src="/shared/assets/header-scroll-any.js?v=20260624-smooth2" defer></script>

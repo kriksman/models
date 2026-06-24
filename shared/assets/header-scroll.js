@@ -177,6 +177,8 @@
   }
 
   function bindScrollSources() {
+    if (isDrawerOpen()) return;
+
     bindSource(window);
     bindSource(document);
     bindSource(document.documentElement);
@@ -248,6 +250,12 @@
   }
 
   window.setInterval(function () {
+    if (isDrawerOpen()) {
+      var header = getHeader();
+      if (header) showHeader(header);
+      return;
+    }
+
     bindScrollSources();
     requestUpdate(activeSource);
   }, 500);

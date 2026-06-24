@@ -18,6 +18,7 @@
   var ticking = false;
   var scrollLocked = false;
   var lockedScrollY = 0;
+  var lockTouchY = null;
   var previousBodyStyles = null;
   var previousHtmlStyles = null;
 
@@ -48,12 +49,8 @@
 
     lockedScrollY = getScrollTop(window);
     previousBodyStyles = {
-      position: document.body.style.position,
-      top: document.body.style.top,
-      left: document.body.style.left,
-      right: document.body.style.right,
-      width: document.body.style.width,
-      overflow: document.body.style.overflow
+      overflow: document.body.style.overflow,
+      overscrollBehavior: document.body.style.overscrollBehavior
     };
     previousHtmlStyles = {
       overflow: document.documentElement.style.overflow,
@@ -64,12 +61,8 @@
     document.body.classList.add('iyc-nav-locked');
     document.documentElement.style.overflow = 'hidden';
     document.documentElement.style.overscrollBehavior = 'none';
-    document.body.style.position = 'fixed';
-    document.body.style.top = '-' + lockedScrollY + 'px';
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.style.width = '100%';
     document.body.style.overflow = 'hidden';
+    document.body.style.overscrollBehavior = 'none';
     header.classList.add('menu-open');
     showHeader();
     scrollLocked = true;
@@ -82,12 +75,8 @@
     document.body.classList.remove('iyc-nav-locked');
 
     if (previousBodyStyles) {
-      document.body.style.position = previousBodyStyles.position;
-      document.body.style.top = previousBodyStyles.top;
-      document.body.style.left = previousBodyStyles.left;
-      document.body.style.right = previousBodyStyles.right;
-      document.body.style.width = previousBodyStyles.width;
       document.body.style.overflow = previousBodyStyles.overflow;
+      document.body.style.overscrollBehavior = previousBodyStyles.overscrollBehavior;
     }
     if (previousHtmlStyles) {
       document.documentElement.style.overflow = previousHtmlStyles.overflow;
@@ -99,6 +88,41 @@
     prevY = lockedScrollY;
     gestureOffset = lockedScrollY;
     scrollLocked = false;
+  }
+
+  function drawerCanScroll(deltaY) {
+    var maxScroll = Math.max(0, drawer.scrollHeight - drawer.clientHeight);
+    if (maxScroll <= 1) return false;
+    if (deltaY < 0) return drawer.scrollTop > 0;
+    return drawer.scrollTop < maxScroll - 1;
+  }
+
+  function shouldBlockPageScroll(target, deltaY) {
+    if (!isDrawerOpen()) return false;
+    if (!drawer.contains(target)) return true;
+    return !drawerCanScroll(deltaY);
+  }
+
+  function guardWheelScroll(event) {
+    if (!isDrawerOpen()) return;
+    showHeader();
+    if (shouldBlockPageScroll(event.target, event.deltaY || 0)) event.preventDefault();
+  }
+
+  function captureLockTouch(event) {
+    if (!event.touches || !event.touches.length) return;
+    lockTouchY = event.touches[0].clientY;
+  }
+
+  function guardTouchScroll(event) {
+    var nextTouchY;
+    var deltaY;
+    if (!isDrawerOpen() || !event.touches || !event.touches.length || lockTouchY === null) return;
+    nextTouchY = event.touches[0].clientY;
+    deltaY = lockTouchY - nextTouchY;
+    lockTouchY = nextTouchY;
+    showHeader();
+    if (shouldBlockPageScroll(event.target, deltaY)) event.preventDefault();
   }
 
   function getScrollTop(source) {
@@ -258,6 +282,10 @@
     applyGestureDirection(touchY - nextTouchY);
     touchY = nextTouchY;
   }, { passive: true, capture: true });
+
+  document.addEventListener('wheel', guardWheelScroll, { passive: false, capture: true });
+  document.addEventListener('touchstart', captureLockTouch, { passive: true, capture: true });
+  document.addEventListener('touchmove', guardTouchScroll, { passive: false, capture: true });
 
   if (toggle) {
     toggle.addEventListener('change', function () {
