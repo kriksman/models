@@ -58,6 +58,18 @@
   #siteHeader.nav-hidden {
     transform: translateY(-100%);
   }
+  #siteHeader.menu-open,
+  #siteHeader.menu-open.header--hidden,
+  #siteHeader.menu-open.hidden,
+  #siteHeader.menu-open.nav-hidden {
+    transform: translate3d(0,0,0) !important;
+  }
+
+  html.iyc-nav-locked,
+  body.iyc-nav-locked {
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+  }
 
   #siteHeader .nav-toggle {
     position: absolute;
@@ -319,6 +331,7 @@
     max-height: 0;
     overflow: hidden;
     overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     transition: max-height 0.5s var(--nav-ease), padding 0.34s var(--nav-ease);
   }
   #siteHeader .nav-drawer.open {
@@ -518,7 +531,7 @@
     alt=""
     aria-hidden="true"
     style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none"
-    onload="(function(d,w){if(w.__iycHeaderScrollImageBoot)return;w.__iycHeaderScrollImageBoot=1;var s=d.createElement('script');s.src='/shared/assets/header-scroll-any.js?v=20260617-img-boot';s.defer=true;d.head.appendChild(s);})(document,window)"
+    onload="(function(d,w){if(w.__iycHeaderScrollImageBoot)return;w.__iycHeaderScrollImageBoot=1;var s=d.createElement('script');s.src='/shared/assets/header-scroll-any.js?v=20260624-lock';s.defer=true;d.head.appendChild(s);})(document,window)"
   >
   <input class="nav-toggle" type="checkbox" id="navToggle" aria-hidden="true" tabindex="-1">
 
@@ -607,6 +620,10 @@
   let gestureOffset = prevY;
   let touchY = null;
   let ticking = false;
+  let scrollLocked = false;
+  let lockedScrollY = 0;
+  let previousBodyStyles = null;
+  let previousHtmlStyles = null;
 
   // ── Auto-hide on scroll ──────────────────────────────
   function isDrawerOpen() {
@@ -614,7 +631,7 @@
   }
 
   function showHeader() {
-    header.classList.remove('hidden', 'nav-hidden');
+    header.classList.remove('header--hidden', 'hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
@@ -626,6 +643,67 @@
 
     header.classList.add('hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+  }
+
+  function lockPageScroll() {
+    if (scrollLocked) {
+      showHeader();
+      return;
+    }
+
+    lockedScrollY = getScrollTop(window);
+    previousBodyStyles = {
+      position: document.body.style.position,
+      top: document.body.style.top,
+      left: document.body.style.left,
+      right: document.body.style.right,
+      width: document.body.style.width,
+      overflow: document.body.style.overflow
+    };
+    previousHtmlStyles = {
+      overflow: document.documentElement.style.overflow,
+      overscrollBehavior: document.documentElement.style.overscrollBehavior
+    };
+
+    document.documentElement.classList.add('iyc-nav-locked');
+    document.body.classList.add('iyc-nav-locked');
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overscrollBehavior = 'none';
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + lockedScrollY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    header.classList.add('menu-open');
+    showHeader();
+    scrollLocked = true;
+  }
+
+  function unlockPageScroll() {
+    if (!scrollLocked) return;
+
+    document.documentElement.classList.remove('iyc-nav-locked');
+    document.body.classList.remove('iyc-nav-locked');
+
+    if (previousBodyStyles) {
+      document.body.style.position = previousBodyStyles.position;
+      document.body.style.top = previousBodyStyles.top;
+      document.body.style.left = previousBodyStyles.left;
+      document.body.style.right = previousBodyStyles.right;
+      document.body.style.width = previousBodyStyles.width;
+      document.body.style.overflow = previousBodyStyles.overflow;
+    }
+    if (previousHtmlStyles) {
+      document.documentElement.style.overflow = previousHtmlStyles.overflow;
+      document.documentElement.style.overscrollBehavior = previousHtmlStyles.overscrollBehavior;
+    }
+
+    header.classList.remove('menu-open');
+    window.scrollTo(0, lockedScrollY);
+    prevY = lockedScrollY;
+    gestureOffset = lockedScrollY;
+    scrollLocked = false;
   }
 
   function getScrollTop(source) {
@@ -765,11 +843,13 @@
 
   // ── Burger toggle ────────────────────────────────────
   function openDrawer() {
+    lockPageScroll();
     drawer.classList.add('open');
     burger.classList.add('open');
     if (toggle) toggle.checked = true;
     burger.setAttribute('aria-expanded', 'true');
     drawer.setAttribute('aria-hidden', 'false');
+    showHeader();
   }
   function closeDrawer() {
     drawer.classList.remove('open');
@@ -777,6 +857,7 @@
     if (toggle) toggle.checked = false;
     burger.setAttribute('aria-expanded', 'false');
     drawer.setAttribute('aria-hidden', 'true');
+    unlockPageScroll();
   }
 
   if (toggle) {
@@ -812,5 +893,5 @@
   });
 })();
 </script>
-<script src="/shared/assets/menu-init.js?v=20260617-scroll" defer></script>
-<script src="/shared/assets/header-scroll-any.js?v=20260617-any-scroll" defer></script>
+<script src="/shared/assets/menu-init.js?v=20260624-lock" defer></script>
+<script src="/shared/assets/header-scroll-any.js?v=20260624-lock" defer></script>

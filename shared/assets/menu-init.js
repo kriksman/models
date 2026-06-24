@@ -16,13 +16,17 @@
   var gestureOffset = prevY;
   var touchY = null;
   var ticking = false;
+  var scrollLocked = false;
+  var lockedScrollY = 0;
+  var previousBodyStyles = null;
+  var previousHtmlStyles = null;
 
   function isDrawerOpen() {
     return drawer.classList.contains('open') || (toggle && toggle.checked);
   }
 
   function showHeader() {
-    header.classList.remove('hidden', 'nav-hidden');
+    header.classList.remove('header--hidden', 'hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
@@ -34,6 +38,67 @@
 
     header.classList.add('hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+  }
+
+  function lockPageScroll() {
+    if (scrollLocked) {
+      showHeader();
+      return;
+    }
+
+    lockedScrollY = getScrollTop(window);
+    previousBodyStyles = {
+      position: document.body.style.position,
+      top: document.body.style.top,
+      left: document.body.style.left,
+      right: document.body.style.right,
+      width: document.body.style.width,
+      overflow: document.body.style.overflow
+    };
+    previousHtmlStyles = {
+      overflow: document.documentElement.style.overflow,
+      overscrollBehavior: document.documentElement.style.overscrollBehavior
+    };
+
+    document.documentElement.classList.add('iyc-nav-locked');
+    document.body.classList.add('iyc-nav-locked');
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overscrollBehavior = 'none';
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + lockedScrollY + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    header.classList.add('menu-open');
+    showHeader();
+    scrollLocked = true;
+  }
+
+  function unlockPageScroll() {
+    if (!scrollLocked) return;
+
+    document.documentElement.classList.remove('iyc-nav-locked');
+    document.body.classList.remove('iyc-nav-locked');
+
+    if (previousBodyStyles) {
+      document.body.style.position = previousBodyStyles.position;
+      document.body.style.top = previousBodyStyles.top;
+      document.body.style.left = previousBodyStyles.left;
+      document.body.style.right = previousBodyStyles.right;
+      document.body.style.width = previousBodyStyles.width;
+      document.body.style.overflow = previousBodyStyles.overflow;
+    }
+    if (previousHtmlStyles) {
+      document.documentElement.style.overflow = previousHtmlStyles.overflow;
+      document.documentElement.style.overscrollBehavior = previousHtmlStyles.overscrollBehavior;
+    }
+
+    header.classList.remove('menu-open');
+    window.scrollTo(0, lockedScrollY);
+    prevY = lockedScrollY;
+    gestureOffset = lockedScrollY;
+    scrollLocked = false;
   }
 
   function getScrollTop(source) {
@@ -156,11 +221,13 @@
   }
 
   function openDrawer() {
+    lockPageScroll();
     drawer.classList.add('open');
     burger.classList.add('open');
     if (toggle) toggle.checked = true;
     burger.setAttribute('aria-expanded', 'true');
     drawer.setAttribute('aria-hidden', 'false');
+    showHeader();
   }
 
   function closeDrawer() {
@@ -169,6 +236,7 @@
     if (toggle) toggle.checked = false;
     burger.setAttribute('aria-expanded', 'false');
     drawer.setAttribute('aria-hidden', 'true');
+    unlockPageScroll();
   }
 
   bindScrollSources();
