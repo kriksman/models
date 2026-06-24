@@ -17,10 +17,10 @@
     "layout_rhythm": "alternating",
     "image_treatment": "soft-offset-mix",
     "accent_style": "sports-trust",
-    "hero_style": "full-bleed",
+    "hero_style": "framed-image-above-copy",
     "density": "medium",
     "section_variation": [
-      "full-bleed-hero",
+      "framed-image-hero",
       "asymmetric-feature",
       "stat-band",
       "editorial-gallery"
@@ -33,7 +33,7 @@
       "automatic-first copy"
     ]
   },
-  "theme": "theme-ember",
+  "theme": "theme-futuristic-light",
   "renderer": "premium-template-v9",
   "design_stack": [
     "Next.js",
