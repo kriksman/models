@@ -1,21 +1,26 @@
 <style>
+.iyc-footer{background:radial-gradient(circle at 15% 0%,rgba(24,185,255,0.24),transparent 34%),radial-gradient(circle at 84% 0%,rgba(45,143,255,0.2),transparent 32%),linear-gradient(135deg,rgba(255,255,255,0.86),rgba(234,243,255,0.68));color:#07101f;border-top:1px solid rgba(255,255,255,0.7);box-shadow:inset 0 1px 0 rgba(255,255,255,0.86),inset 0 -1px 0 rgba(12,38,78,0.06);-webkit-backdrop-filter:blur(20px) saturate(1.22);backdrop-filter:blur(20px) saturate(1.22)}
 .iyc-footer .iyc-footer-grid{display:grid;gap:34px;padding:clamp(44px,6vw,72px) 0 34px}
 @media(min-width:760px){.iyc-footer .iyc-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1120px){.iyc-footer .iyc-footer-grid{grid-template-columns:1.35fr 1.1fr 1.25fr;gap:52px}}
 .iyc-footer .iyc-footer-stack{display:grid;gap:30px;align-content:start}
-.iyc-footer h3{margin-bottom:14px}
-.iyc-footer p{margin:0}
+.iyc-footer h3{margin-bottom:14px;color:#0a2a5c}
+.iyc-footer p,.iyc-footer li{margin:0;color:#36475e}
+.iyc-footer a{color:#0a2a5c}
+.iyc-footer a:hover{color:#2d8fff}
 .iyc-footer .iyc-tight{display:grid;gap:6px}
 .iyc-footer .iyc-spaced{display:grid;gap:12px}
 .iyc-footer .iyc-qr-wrap{display:flex;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-top:18px}
 .iyc-footer .iyc-qr-copy{max-width:24ch}
 .iyc-footer .iyc-qr{width:132px;height:132px;object-fit:contain;background:#fff;padding:6px;border-radius:4px}
 .iyc-footer .iyc-social-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.iyc-footer .iyc-social-link{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.44);border:1px solid var(--hair);transition:transform .2s,border-color .2s,background .2s}
+.iyc-footer .iyc-social-link{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.58);border:1px solid rgba(12,38,78,0.12);box-shadow:inset 0 1px 0 rgba(255,255,255,0.72);transition:transform .2s,border-color .2s,background .2s,box-shadow .2s}
 .iyc-footer .iyc-social-link:hover{transform:translateY(-2px);border-color:var(--accent);background:rgba(255,255,255,.7)}
 .iyc-footer .iyc-social-link img{width:28px;height:28px;object-fit:contain}
 .iyc-footer .iyc-social-link[aria-label="Trade Me"] img{width:34px;height:34px}
 .iyc-footer .iyc-footer-logo img{height:44px;width:auto}
+.iyc-footer .legal{border-top:1px solid rgba(12,38,78,0.1);color:#647488}
+.iyc-footer .legal span{color:#647488}
 @media(max-width:520px){
   .iyc-footer .iyc-footer-grid{gap:28px}
   .iyc-footer .iyc-qr-wrap{gap:14px}
