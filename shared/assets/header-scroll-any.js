@@ -92,13 +92,27 @@
       return;
     }
 
+    syncHiddenOffset(header);
     header.classList.add('header--hidden', 'hidden', 'nav-hidden');
-    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+    header.style.setProperty('transform', 'translate3d(0,var(--nav-hidden-offset),0)', 'important');
   }
 
   function showHeader(header) {
     header.classList.remove('header--hidden', 'hidden', 'nav-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
+  }
+
+  function syncHiddenOffset(header) {
+    var target = header || getHeader();
+    var progress = document.getElementById('navProgress');
+    var headerTop;
+    var progressHeight;
+    var hiddenOffset;
+    if (!target) return;
+    headerTop = parseFloat(window.getComputedStyle(target).top) || 0;
+    progressHeight = progress ? (progress.offsetHeight || 3) : 3;
+    hiddenOffset = Math.max(progressHeight, target.offsetHeight + headerTop - progressHeight);
+    target.style.setProperty('--nav-hidden-offset', '-' + hiddenOffset + 'px');
   }
 
   function updateProgress(y, source) {
@@ -233,6 +247,7 @@
   }
 
   bindScrollSources();
+  syncHiddenOffset();
   gestureY = getMaxKnownScrollTop();
 
   document.addEventListener('wheel', handleWheel, { passive: true, capture: true });
@@ -241,6 +256,8 @@
   document.addEventListener('scroll', function () { requestUpdate(activeSource); }, { passive: true, capture: true });
   document.addEventListener('DOMContentLoaded', bindScrollSources, { once: true });
   window.addEventListener('load', bindScrollSources, { once: true });
+  window.addEventListener('load', function () { syncHiddenOffset(); }, { once: true });
+  window.addEventListener('resize', function () { syncHiddenOffset(); }, { passive: true });
 
   if (typeof MutationObserver === 'function') {
     new MutationObserver(bindScrollSources).observe(document.documentElement, {

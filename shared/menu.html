@@ -27,6 +27,7 @@
     --nav-glow: 0 18px 44px rgba(45,143,255,0.3);
     --nav-shadow: 0 26px 60px rgba(12,38,78,0.12);
     --nav-ease: cubic-bezier(0.16,1,0.3,1);
+    --nav-hidden-offset: -100%;
     --transition: 0.28s var(--nav-ease);
   }
 
@@ -56,7 +57,7 @@
   #siteHeader.header--hidden,
   #siteHeader.hidden,
   #siteHeader.nav-hidden {
-    transform: translateY(-100%);
+    transform: translateY(var(--nav-hidden-offset));
   }
   #siteHeader.menu-open,
   #siteHeader.menu-open.header--hidden,
@@ -136,6 +137,18 @@
     color: var(--nav-ink);
     font-weight: 800;
   }
+  #siteHeader .contact-strip .contact-meta {
+    color: var(--nav-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  #siteHeader .contact-strip a.contact-meta:hover {
+    color: var(--nav-accent-hover);
+  }
   #siteHeader .contact-strip .contact-email {
     font-size: 10.5px;
   }
@@ -179,24 +192,15 @@
     display: flex;
     align-items: center;
     min-width: max-content;
-    padding: 6px 12px;
-    border-radius: 14px;
-    background: var(--nav-chrome);
-    border: 1px solid rgba(255,255,255,0.8);
-    box-shadow:
-      0 14px 30px rgba(12,38,78,0.12),
-      inset 0 1px 0 rgba(255,255,255,0.86);
-    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
     position: relative;
   }
   #siteHeader .nav-logo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(110deg,transparent 18%,rgba(255,255,255,0.46) 42%,transparent 64%);
-    transform: translateX(-130%);
-    transition: transform 0.8s var(--nav-ease);
-    pointer-events: none;
+    display: none;
   }
   #siteHeader .nav-logo:hover::after {
     transform: translateX(130%);
@@ -465,8 +469,11 @@
       padding: 4px 9px;
     }
     #siteHeader .contact-email { display: none !important; }
+    #siteHeader .contact-info {
+      display: flex !important;
+      font-size: 10.5px;
+    }
     #siteHeader .nav-main { padding: 8px 10px 10px; min-height: 68px; }
-    #siteHeader .nav-logo { padding: 5px 9px; border-radius: 12px; }
     #siteHeader .nav-logo img { height: 44px; }
   }
 
@@ -486,7 +493,7 @@
       gap: 5px;
       font-size: 10.5px;
     }
-    #siteHeader .contact-card:nth-child(3) {
+    #siteHeader .contact-card.is-info {
       display: none;
     }
     #siteHeader .nav-drawer.open,
@@ -570,9 +577,11 @@
       <a class="contact-phone" href="tel:+64220288260"><span class="cs-icon">Tel</span> 022 028 8260 <em style="opacity:.65">(Julian)</em></a>
       <a class="contact-email" href="mailto:julian@importyourcar.co.nz"><span class="cs-icon">Mail</span> julian@importyourcar.co.nz</a>
     </div>
-    <div class="contact-card">
-      <a class="contact-phone" href="tel:+6421950789"><span class="cs-icon">Tel</span> 021 950 789 <em style="opacity:.65">(Nick)</em></a>
-      <a class="contact-email" href="mailto:nick@importyourcar.co.nz"><span class="cs-icon">Mail</span> nick@importyourcar.co.nz</a>
+    <div class="contact-card is-hours">
+      <span class="contact-meta"><span class="cs-icon">Hours</span> 1-7pm</span>
+    </div>
+    <div class="contact-card is-info">
+      <a class="contact-meta contact-info" href="mailto:info@importyourcar.co.nz"><span class="cs-icon">Mail</span> info@importyourcar.co.nz - 24/7</a>
     </div>
   </div>
 
@@ -661,14 +670,22 @@
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
+  function syncHiddenOffset() {
+    const headerTop = parseFloat(window.getComputedStyle(header).top) || 0;
+    const progressHeight = progress ? (progress.offsetHeight || 3) : 3;
+    const hiddenOffset = Math.max(progressHeight, header.offsetHeight + headerTop - progressHeight);
+    header.style.setProperty('--nav-hidden-offset', '-' + hiddenOffset + 'px');
+  }
+
   function hideHeader() {
     if (isDrawerOpen()) {
       showHeader();
       return;
     }
 
+    syncHiddenOffset();
     header.classList.add('hidden', 'nav-hidden');
-    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+    header.style.setProperty('transform', 'translate3d(0,var(--nav-hidden-offset),0)', 'important');
   }
 
   function lockPageScroll() {
@@ -869,8 +886,11 @@
   }
 
   bindScrollSources();
+  syncHiddenOffset();
   document.addEventListener('DOMContentLoaded', bindScrollSources, { once: true });
   window.addEventListener('load', bindScrollSources, { once: true });
+  window.addEventListener('load', syncHiddenOffset, { once: true });
+  window.addEventListener('resize', syncHiddenOffset, { passive: true });
   window.setTimeout(bindScrollSources, 800);
 
   window.addEventListener('wheel', function (e) {

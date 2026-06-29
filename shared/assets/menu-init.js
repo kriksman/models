@@ -31,14 +31,22 @@
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
+  function syncHiddenOffset() {
+    var headerTop = parseFloat(window.getComputedStyle(header).top) || 0;
+    var progressHeight = progress ? (progress.offsetHeight || 3) : 3;
+    var hiddenOffset = Math.max(progressHeight, header.offsetHeight + headerTop - progressHeight);
+    header.style.setProperty('--nav-hidden-offset', '-' + hiddenOffset + 'px');
+  }
+
   function hideHeader() {
     if (isDrawerOpen()) {
       showHeader();
       return;
     }
 
+    syncHiddenOffset();
     header.classList.add('hidden', 'nav-hidden');
-    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+    header.style.setProperty('transform', 'translate3d(0,var(--nav-hidden-offset),0)', 'important');
   }
 
   function lockPageScroll() {
@@ -264,8 +272,11 @@
   }
 
   bindScrollSources();
+  syncHiddenOffset();
   document.addEventListener('DOMContentLoaded', bindScrollSources, { once: true });
   window.addEventListener('load', bindScrollSources, { once: true });
+  window.addEventListener('load', syncHiddenOffset, { once: true });
+  window.addEventListener('resize', syncHiddenOffset, { passive: true });
   window.setTimeout(bindScrollSources, 800);
 
   window.addEventListener('wheel', function (e) {
