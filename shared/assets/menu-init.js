@@ -38,7 +38,7 @@
     }
 
     header.classList.add('hidden', 'nav-hidden');
-    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+    header.style.setProperty('transform', 'translate3d(0,calc(-100% + var(--nav-progress-height, 3px)),0)', 'important');
   }
 
   function lockPageScroll() {

@@ -27,6 +27,7 @@
     --nav-glow: 0 18px 44px rgba(45,143,255,0.3);
     --nav-shadow: 0 26px 60px rgba(12,38,78,0.12);
     --nav-ease: cubic-bezier(0.16,1,0.3,1);
+    --nav-progress-height: 3px;
     --transition: 0.28s var(--nav-ease);
   }
 
@@ -56,7 +57,7 @@
   #siteHeader.header--hidden,
   #siteHeader.hidden,
   #siteHeader.nav-hidden {
-    transform: translateY(-100%);
+    transform: translateY(calc(-100% + var(--nav-progress-height)));
   }
   #siteHeader.menu-open,
   #siteHeader.menu-open.header--hidden,
@@ -93,6 +94,15 @@
       inset 0 -1px 0 rgba(12,38,78,0.06);
     -webkit-backdrop-filter: blur(20px) saturate(1.22);
     backdrop-filter: blur(20px) saturate(1.22);
+    transition: opacity 0.28s var(--nav-ease);
+  }
+  #siteHeader.header--hidden::before,
+  #siteHeader.hidden::before,
+  #siteHeader.nav-hidden::before {
+    opacity: 0;
+  }
+  #siteHeader.menu-open::before {
+    opacity: 1;
   }
 
   /* ── Contact strip (top micro-bar) ───────────────────── */
@@ -135,6 +145,18 @@
   #siteHeader .contact-strip .contact-phone {
     color: var(--nav-ink);
     font-weight: 800;
+  }
+  #siteHeader .contact-strip .contact-meta {
+    color: var(--nav-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  #siteHeader .contact-strip a.contact-meta:hover {
+    color: var(--nav-accent-hover);
   }
   #siteHeader .contact-strip .contact-email {
     font-size: 10.5px;
@@ -179,24 +201,15 @@
     display: flex;
     align-items: center;
     min-width: max-content;
-    padding: 6px 12px;
-    border-radius: 14px;
-    background: var(--nav-chrome);
-    border: 1px solid rgba(255,255,255,0.8);
-    box-shadow:
-      0 14px 30px rgba(12,38,78,0.12),
-      inset 0 1px 0 rgba(255,255,255,0.86);
-    overflow: hidden;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
     position: relative;
   }
   #siteHeader .nav-logo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(110deg,transparent 18%,rgba(255,255,255,0.46) 42%,transparent 64%);
-    transform: translateX(-130%);
-    transition: transform 0.8s var(--nav-ease);
-    pointer-events: none;
+    display: none;
   }
   #siteHeader .nav-logo:hover::after {
     transform: translateX(130%);
@@ -428,7 +441,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 3px;
+    height: var(--nav-progress-height);
     width: 0%;
     background: linear-gradient(90deg, var(--nav-accent), var(--nav-cyan));
     box-shadow: 0 0 16px rgba(24,185,255,0.74);
@@ -464,9 +477,12 @@
       flex: 0 0 auto;
       padding: 4px 9px;
     }
+    #siteHeader .contact-card a,
+    #siteHeader .contact-meta {
+      font-size: 10.5px;
+    }
     #siteHeader .contact-email { display: none !important; }
     #siteHeader .nav-main { padding: 8px 10px 10px; min-height: 68px; }
-    #siteHeader .nav-logo { padding: 5px 9px; border-radius: 12px; }
     #siteHeader .nav-logo img { height: 44px; }
   }
 
@@ -485,9 +501,6 @@
     #siteHeader .contact-strip a {
       gap: 5px;
       font-size: 10.5px;
-    }
-    #siteHeader .contact-card:nth-child(3) {
-      display: none;
     }
     #siteHeader .nav-drawer.open,
     #siteHeader .nav-toggle:checked ~ .nav-drawer {
@@ -556,7 +569,6 @@
     alt=""
     aria-hidden="true"
     style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none"
-    onload="(function(d,w){if(w.__iycHeaderScrollImageBoot)return;w.__iycHeaderScrollImageBoot=1;var s=d.createElement('script');s.src='/shared/assets/header-scroll-any.js?v=20260624-smooth2';s.defer=true;d.head.appendChild(s);})(document,window)"
   >
   <input class="nav-toggle" type="checkbox" id="navToggle" aria-hidden="true" tabindex="-1">
 
@@ -571,8 +583,8 @@
       <a class="contact-email" href="mailto:julian@importyourcar.co.nz"><span class="cs-icon">Mail</span> julian@importyourcar.co.nz</a>
     </div>
     <div class="contact-card">
-      <a class="contact-phone" href="tel:+6421950789"><span class="cs-icon">Tel</span> 021 950 789 <em style="opacity:.65">(Nick)</em></a>
-      <a class="contact-email" href="mailto:nick@importyourcar.co.nz"><span class="cs-icon">Mail</span> nick@importyourcar.co.nz</a>
+      <span class="contact-meta"><span class="cs-icon">Hours</span> 1-7pm</span>
+      <a class="contact-meta contact-info" href="mailto:info@importyourcar.co.nz"><span class="cs-icon">Mail</span> info@importyourcar.co.nz - 24/7</a>
     </div>
   </div>
 
@@ -668,7 +680,7 @@
     }
 
     header.classList.add('hidden', 'nav-hidden');
-    header.style.setProperty('transform', 'translate3d(0,-110%,0)', 'important');
+    header.style.setProperty('transform', 'translate3d(0,calc(-100% + var(--nav-progress-height)),0)', 'important');
   }
 
   function lockPageScroll() {
@@ -945,4 +957,3 @@
 })();
 </script>
 <script src="/shared/assets/menu-init.js?v=20260624-smooth2" defer></script>
-<script src="/shared/assets/header-scroll-any.js?v=20260624-smooth2" defer></script>
