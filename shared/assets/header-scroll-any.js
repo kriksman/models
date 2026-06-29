@@ -94,11 +94,13 @@
 
     syncHiddenOffset(header);
     header.classList.add('header--hidden', 'hidden', 'nav-hidden');
+    document.body.classList.add('iyc-header-hidden');
     header.style.setProperty('transform', 'translate3d(0,var(--nav-hidden-offset),0)', 'important');
   }
 
   function showHeader(header) {
     header.classList.remove('header--hidden', 'hidden', 'nav-hidden');
+    document.body.classList.remove('iyc-header-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
@@ -117,10 +119,14 @@
 
   function updateProgress(y, source) {
     var progress = document.getElementById('navProgress');
+    var progressPin = document.getElementById('navProgressPin');
     var scrollableHeight;
+    var progressWidth;
     if (!progress) return;
     scrollableHeight = getScrollableHeight(source || activeSource);
-    progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
+    progressWidth = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
+    progress.style.width = progressWidth;
+    if (progressPin) progressPin.style.width = progressWidth;
   }
 
   function applyDirection(delta, y, source) {

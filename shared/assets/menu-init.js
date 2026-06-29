@@ -3,6 +3,7 @@
   var burger   = document.getElementById('navBurger');
   var drawer   = document.getElementById('navDrawer');
   var progress = document.getElementById('navProgress');
+  var progressPin = document.getElementById('navProgressPin');
   var toggle   = document.getElementById('navToggle');
 
   if (!header || !burger || !drawer || header.dataset.menuInit === 'done') return;
@@ -28,6 +29,7 @@
 
   function showHeader() {
     header.classList.remove('header--hidden', 'hidden', 'nav-hidden');
+    document.body.classList.remove('iyc-header-hidden');
     header.style.setProperty('transform', 'translate3d(0,0,0)', 'important');
   }
 
@@ -46,6 +48,7 @@
 
     syncHiddenOffset();
     header.classList.add('hidden', 'nav-hidden');
+    document.body.classList.add('iyc-header-hidden');
     header.style.setProperty('transform', 'translate3d(0,var(--nav-hidden-offset),0)', 'important');
   }
 
@@ -182,10 +185,12 @@
       var y = getScrollTop(activeScrollSource);
       var delta = y - prevY;
       var scrollableHeight = getScrollableHeight(activeScrollSource);
+      var progressWidth = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
 
       if (progress) {
-        progress.style.width = scrollableHeight > 0 ? (y / scrollableHeight * 100) + '%' : '0%';
+        progress.style.width = progressWidth;
       }
+      if (progressPin) progressPin.style.width = progressWidth;
 
       if (isDrawerOpen()) {
         showHeader();
