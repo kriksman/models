@@ -27,13 +27,6 @@
 .iyc-grade-badge{display:inline-grid;place-items:center;min-width:86px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--cyan,#18b9ff));color:#fff;font-family:var(--font-d);font-size:1.8rem;font-weight:800;padding:12px}
 .iyc-auction-image{overflow:hidden;border:1px solid rgba(45,143,255,.2);border-radius:8px;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
 .iyc-auction-image img{width:100%;height:auto;display:block}
-.iyc-auction-redacted{position:relative}
-.iyc-auction-redacted .iyc-redact{position:absolute;z-index:2;background:#fff;border:1px solid rgba(12,38,78,.18);box-shadow:0 2px 8px rgba(17,84,154,.08)}
-.iyc-redact-lot{left:0;top:0;width:12.6%;height:15.7%}
-.iyc-redact-chassis{right:0;top:40.2%;width:31%;height:5.8%}
-.iyc-redact-grade{right:0;top:0;width:9.2%;height:12.8%;display:grid;place-items:center;text-align:center;color:#0b4f94;font-family:var(--font-d);font-weight:800}
-.iyc-redact-grade strong{font-size:clamp(1.2rem,3vw,2.15rem);line-height:1}
-.iyc-redact-grade small{display:block;font-size:.48rem;line-height:1.1;color:#38546d;text-transform:uppercase;letter-spacing:.05em;padding:0 3px}
 .iyc-grade-scale{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .iyc-grade-scale span{font-family:var(--font-d);font-weight:700;border:1px solid var(--hair);border-radius:8px;background:rgba(255,255,255,.72);padding:9px 12px}
 .iyc-grade-scale .best{background:linear-gradient(135deg,rgba(45,143,255,.14),rgba(24,185,255,.12));border-color:rgba(45,143,255,.28);color:#0b4f94}
@@ -91,4 +84,4 @@
 .iyc-contact-card span{font-family:var(--font-m,var(--font-d));font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 .iyc-contact-card strong{font-family:var(--font-d);font-size:1rem;color:var(--ink);line-height:1.35}
 .iyc-contact-hours{color:var(--muted);font-size:.95rem;border-top:1px solid var(--hair);padding-top:16px;max-width:none}
-@media(max-width:560px){.iyc-process-step{grid-template-columns:48px 1fr}.iyc-fee-total strong{font-size:3.2rem}.iyc-platform-top{display:grid}.iyc-platform-score{font-size:2.8rem}.iyc-redact-grade small{display:none}}
+@media(max-width:560px){.iyc-process-step{grid-template-columns:48px 1fr}.iyc-fee-total strong{font-size:3.2rem}.iyc-platform-top{display:grid}.iyc-platform-score{font-size:2.8rem}}
