@@ -2,13 +2,13 @@
   "passed": true,
   "issues": [],
   "form_count": 3,
-  "approved_images_available": 12,
-  "approved_images_used": 12,
+  "approved_images_available": 8,
+  "approved_images_used": 8,
   "images_source": "payload",
-  "payload_approved_images_count": 12,
-  "db_approved_images_count": 12,
+  "payload_approved_images_count": 8,
+  "db_approved_images_count": 8,
   "rejected_images_count": 0,
-  "html_length": 66605,
+  "html_length": 64829,
   "theme": "theme-futuristic-light",
   "renderer": "premium-template-v9",
   "design_stack": [
@@ -45,5 +45,5 @@
     "modern CSS variables"
   ],
   "forbidden_stack_hits": [],
-  "checked_at": "2026-07-01T11:56:37.290Z"
+  "checked_at": "2026-07-02T02:30:55.524Z"
 }
