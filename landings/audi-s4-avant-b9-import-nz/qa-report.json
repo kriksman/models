@@ -1,0 +1,57 @@
+{
+  "passed": false,
+  "issues": [
+    "Missing SEOGEO text: How it works",
+    "Missing SEOGEO text: Tell us the S4 Avant B9 spec, colour, and bud",
+    "Missing process step: Tell us what you're after",
+    "Missing process step: We search the auctions",
+    "Missing process step: You approve, we bid",
+    "Missing process step: Shipping to NZ",
+    "Missing process step: Compliance and delivery"
+  ],
+  "form_count": 3,
+  "approved_images_available": 15,
+  "approved_images_used": 15,
+  "images_source": "payload",
+  "payload_approved_images_count": 15,
+  "db_approved_images_count": 15,
+  "rejected_images_count": 0,
+  "html_length": 62420,
+  "theme": "theme-futuristic-light",
+  "renderer": "premium-template-v9",
+  "design_stack": [
+    "Next.js",
+    "React",
+    "Tailwind CSS v4",
+    "shadcn/ui",
+    "Radix UI",
+    "Lucide React",
+    "Framer Motion",
+    "CSS variables",
+    "mobile-first responsive design"
+  ],
+  "forbidden_stack": [
+    "Bootstrap",
+    "jQuery",
+    "Material UI unless requested",
+    "Materialize",
+    "Font Awesome",
+    "Tailwind CSS v3 CDN",
+    "old CSS reset templates",
+    "inline random CSS",
+    "generic landing template"
+  ],
+  "quality_rules": [
+    "premium layout",
+    "clear CTA above the fold",
+    "responsive sections",
+    "no lorem ipsum",
+    "real conversion structure",
+    "accessibility labels",
+    "clean component structure",
+    "semantic HTML",
+    "modern CSS variables"
+  ],
+  "forbidden_stack_hits": [],
+  "checked_at": "2026-07-02T05:29:35.405Z"
+}
