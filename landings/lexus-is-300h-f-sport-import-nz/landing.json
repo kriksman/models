@@ -10,7 +10,7 @@
   "html_path": "landings/lexus-is-300h-f-sport-import-nz/index.html",
   "page_scope": "single_model",
   "city": "NZ-wide",
-  "vehicle_type": "ev",
+  "vehicle_type": "hybrid",
   "design_direction": {
     "design_seed": "lexus-is-300h-f-sport-2017-hybrid-single-model-nz-wide",
     "page_mood": "quiet_premium",

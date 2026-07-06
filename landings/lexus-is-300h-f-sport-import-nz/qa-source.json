@@ -16,13 +16,13 @@
   },
   "blocks": {
     "hero_h1": "Import a Lexus IS 300h F Sport",
-    "hero_subtitle": "The 2017 Lexus IS 300h F Sport pairs a 2.5L petrol-hybrid system with rear-wheel drive and an e-CVT. For NZ buyers, it's a good honest daily sedan with lower running costs than many larger petrol alternatives and a more balanced feel on the open road.",
+    "hero_subtitle": "This Lexus IS 300h looks great in White Nova Glass Flake. It combines Lexus' proven self-charging hybrid system with rear-wheel drive and the highly desirable F SPORT package, giving it the quiet efficiency of a luxury hybrid and the sharper feel of a sports sedan.",
     "proof_points": [
-      "NZ-based team since 2009",
+      "Import support since 2009",
       "Japan specialists — direct auction access",
       "Transparent pricing — compliance is part of the process"
     ],
-    "why_kiwis_buy": "This model suits buyers who want a reliable daily driver with a quieter, lower-cost hybrid setup and a cabin that still feels properly premium. It works well for commuting, mixed open-road use and stop-start traffic, while the rear-wheel-drive layout gives it a more natural balance than many front-drive hybrids.",
+    "why_kiwis_buy": "The IS 300h F SPORT sits at the more desirable end of the IS range because it brings together Lexus comfort, hybrid economy, rear-wheel-drive balance and the sportier F SPORT look. It starts quietly on electric power, brings in the petrol engine automatically when more power is needed, and feels refined in traffic without losing the crisp steering feel people like in the IS chassis.",
     "savings_block": {
       "headline": "Where the money goes on an IS 300h F Sport import",
       "body": "There isn't a fixed public landed range here because auction pricing can move a lot depending on kilometres, grade, service history and F Sport condition. Most totals are built from the Japanese auction purchase price, then shipping and insurance, NZ port charges, NZ entry certification, compliance, registration-related costs and our fee. We'll set that out clearly before you decide whether to bid."
@@ -31,65 +31,69 @@
       "headline": "Find your IS 300h F Sport — we'll do the searching",
       "subtext": "Fill in your details to get started. We'll search the Japanese auctions and come back with real options and pricing by email.",
       "button_text": "Find My Car",
-      "trust_note": "NZ based, since 2009"
+      "trust_note": "Import support since 2009"
     },
     "video_caption": "Watch the F Sport front end, sports seats and hybrid drive display on the dash. Those details show how this car mixes everyday efficiency with a more driver-focused layout.",
-    "main_usp_deep": "The main appeal is simple: this is a 2.5L petrol-hybrid sedan that keeps running costs in check without feeling dull to drive. The rear-wheel-drive layout gives it a more balanced feel than many hybrids, and the e-CVT keeps it smooth in traffic. Because it's a self-charging hybrid, there's no charging routine to think about. F Sport trim also adds the sharper look and more focused cabin many buyers are actually after.",
+    "main_usp_deep": "This IS 300h is powered by a 2.5-litre petrol engine paired with Lexus Hybrid Drive. The electric motor can move the car quietly at low speeds, the petrol engine joins in automatically when stronger acceleration is needed, and the battery recharges while driving through regenerative braking. There is no need to plug it in. Fuel use is typically around 6 litres per 100 kilometres, which is excellent for a luxury sports sedan. The F SPORT package then adds the visual and chassis attitude: unique bumpers, F SPORT mesh grille, exclusive alloy wheels, sports suspension tuning, F SPORT steering wheel, supportive sports seats, LFA-inspired instrument cluster, sportier trim and F SPORT badging.",
     "buyer_persona": {
       "headline": "Who is this car right for?",
       "body": "This suits someone who wants a reliable daily driver with lower running costs than a larger petrol sedan, but doesn't want to give up cabin quality or a bit of driver appeal. It's also a sensible step for anyone moving out of an older European sedan and wanting something easier to live with long term. For that use, it does what it needs to do."
     },
     "trust_company": {
       "headline": "Why import with ImportYourCar.co.nz?",
-      "body": "We've been importing cars for NZ buyers since 2009 and have handled more than 1000 vehicles over that time. We buy through Japanese auctions, provide the auction sheet and supporting documents, and explain the cost breakdown before anything moves ahead. Our team is here in NZ, and we keep the process straightforward from search through to arrival."
+      "body": "We've been importing cars for NZ buyers since 2009 and have handled more than 1000 vehicles over that time. We buy through Japanese auctions, provide the auction sheet and supporting documents, and explain the cost breakdown before anything moves ahead. You can contact the people handling the search, bidding, shipping updates and handover support, so the process stays clear from first enquiry through to arrival."
     },
     "car_specs_benefits": [
       {
-        "spec": "2.5L petrol-hybrid system",
-        "benefit": "Helps keep day-to-day running costs lower than many larger petrol sedans while still being easy to live with."
+        "spec": "Lexus Hybrid Drive",
+        "benefit": "Combines a 2.5-litre petrol engine with an electric motor, using electric drive at low speed and blending in petrol power automatically when more performance is needed."
       },
       {
         "spec": "Rear-wheel drive",
-        "benefit": "Gives the car a more natural balance and steering feel on winding roads and motorway on-ramps."
+        "benefit": "Sends power to the rear wheels, so the front wheels can focus on steering. The result is a more balanced, natural feel through bends and motorway on-ramps."
       },
       {
         "spec": "CVT-style e-CVT",
-        "benefit": "Makes stop-start driving smoother and takes the fuss out of commuting."
+        "benefit": "Uses Lexus' hybrid transaxle to blend petrol and electric power smoothly instead of stepping through normal gears."
       },
       {
-        "spec": "F Sport trim",
-        "benefit": "Adds the sharper styling and sportier cabin details many buyers specifically want."
+        "spec": "F SPORT package",
+        "benefit": "Adds the sportier exterior design, mesh grille, exclusive wheels, tuned suspension, sports seats and LFA-style instrument display."
       },
       {
-        "spec": "Compact luxury hybrid sedan",
-        "benefit": "Easy enough to park in town while still comfortable for regular open-road trips."
+        "spec": "Lexus Safety System+",
+        "benefit": "Normally includes active safety systems such as Adaptive Radar Cruise Control, Lane Departure Assist, Automatic High Beam and Road Sign Assist."
+      },
+      {
+        "spec": "Auction-listed comfort features",
+        "benefit": "Includes reversing camera, Bluetooth, factory sunroof, power front seats, LED headlights, ventilated and heated front seats, Blind Spot Monitoring and heated steering wheel."
       }
     ],
     "standout_features_block": {
       "headline": "What sets it apart",
-      "intro": "These are the Japanese-market features worth checking because they make a real difference in daily NZ use.",
+      "intro": "These are the technologies and factory features worth understanding because they change how the car drives, feels and costs to run.",
       "items": [
         {
-          "title": "2.5L self-charging hybrid drive",
-          "body": "This setup blends petrol and electric drive automatically, with electric-only running possible at low speed. In traffic, that means quieter take-offs, less idling and lower day-to-day fuel spend than many non-hybrid sedans of similar size.",
+          "title": "Lexus Hybrid Drive",
+          "body": "Lexus Hybrid Drive uses a petrol engine, electric motor, high-voltage battery and electronic power-split transmission. The car can move away quietly on electric power, then blend in the 2.5-litre petrol engine when the driver asks for more acceleration. The battery charges itself while driving and through regenerative braking, so there is no plug-in routine.",
           "image_slot": "standout-1",
           "image_hint": "Close-up of the hybrid energy flow display on the dashboard while the car moves slowly through city traffic"
         },
         {
           "title": "Lexus Safety System+",
-          "body": "Many Japanese-market examples include Lexus Safety System+, which can add active safety features that matter on long commutes and motorway trips. It's one of the main reasons to look beyond the cheapest auction car and check equipment properly.",
+          "body": "Lexus Safety System+ is the active driver-assistance package. Depending on exact specification, it normally brings Adaptive Radar Cruise Control to help maintain distance on the motorway, Lane Departure Assist to warn if the car drifts from its lane, Automatic High Beam for night driving and Road Sign Assist for speed-sign recognition.",
           "image_slot": "standout-2",
           "image_hint": "Driver view through the windscreen on a motorway with the instrument cluster visible and lane markings ahead"
         },
         {
-          "title": "F Sport cabin and chassis package",
-          "body": "F Sport is more than styling. It usually brings more supportive seats, sportier trim details and a sharper overall feel, which helps this hybrid sedan feel more involving behind the wheel.",
+          "title": "F SPORT package",
+          "body": "F SPORT is Lexus' factory sports package. On the IS it is highly desirable because it adds the aggressive spindle grille, F SPORT bumper treatment, exclusive wheels, sports suspension tuning, sports seats with extra side support, F SPORT steering wheel and a moving instrument cluster inspired by the Lexus LFA supercar.",
           "image_slot": "standout-3",
           "image_hint": "Front seats, steering wheel and dashboard photographed from the open driver's door showing the F Sport interior"
         },
         {
-          "title": "Parking cameras and sensors",
-          "body": "Many auction cars come with parking aids that are genuinely useful in tighter NZ car parks. On a sedan with low-profile wheels, those features can help reduce kerb damage and parking scrapes.",
+          "title": "Comfort, media and visibility equipment",
+          "body": "The auction list includes reversing camera, Bluetooth, factory sunroof, power front seats, LED headlights, ventilated and heated front seats, Blind Spot Monitoring and heated steering wheel. Blu-ray playback is a nostalgic bonus, letting the factory multimedia system play Blu-ray video or music when parked.",
           "image_slot": "standout-4",
           "image_hint": "Reverse camera screen active on the infotainment display while the car backs into a marked parking space"
         }
@@ -109,11 +113,11 @@
         },
         {
           "attribute": "Powertrain or battery options",
-          "notes": "The key setup here is the 2.5L petrol-hybrid system with e-CVT and rear-wheel drive. The appeal is smooth daily use and lower running costs rather than outright pace."
+          "notes": "The key setup here is Lexus Hybrid Drive: a 2.5-litre petrol engine, electric motor, self-charging battery, regenerative braking and e-CVT driving the rear wheels. The appeal is quiet low-speed running, smooth acceleration and excellent fuel economy for a luxury sedan."
         },
         {
           "attribute": "Key trim differences",
-          "notes": "F Sport is the trim most buyers ask for because of its styling, seats and sportier presentation. Equipment still varies by car, so cameras, safety tech and infotainment need checking individually."
+          "notes": "F SPORT is the trim most buyers ask for because it adds the sportier bumper design, mesh grille, exclusive wheels, sports suspension tuning, sports seats, F SPORT steering wheel, LFA-inspired instrument cluster and distinctive badging. Equipment still varies by car, so sunroof, heated and ventilated seats, Blind Spot Monitoring, camera and media features need checking individually."
         },
         {
           "attribute": "NZ compliance notes",
@@ -205,7 +209,7 @@
       "subtext": "Get auction alerts, stock updates and practical import guides for Japanese-market cars.",
       "button_text": "Subscribe"
     },
-    "company_positioning": "ImportYourCar.co.nz is an NZ-based Japanese vehicle import company operating since 2009. We source vehicles directly from Japanese auctions and focus on clear documentation, transparent pricing and practical advice for NZ buyers.",
+    "company_positioning": "ImportYourCar.co.nz has been helping NZ buyers import Japanese vehicles since 2009. We source vehicles directly from Japanese auctions and focus on clear documentation, transparent pricing and practical advice for buyers who want to understand exactly what they are bidding on.",
     "city_use_case": {
       "headline": "",
       "body": "",
@@ -295,8 +299,8 @@
       "caveats": []
     },
     "engine_drivetrain_block": {
-      "headline": "2.5L hybrid and rear-wheel-drive layout",
-      "body": "The IS 300h uses a 2.5L petrol-hybrid system with an e-CVT and rear-wheel drive. In practice, that means quiet low-speed running, smooth stop-start behaviour and a more balanced feel than many front-drive hybrids. It's aimed at buyers who want comfort first, but still care how the car feels on a back road or motorway on-ramp.",
+      "headline": "Lexus Hybrid Drive and rear-wheel-drive balance",
+      "body": "The IS 300h uses a 2.5-litre petrol engine, electric motor and Lexus Hybrid Drive e-CVT, with power sent to the rear wheels. At low speed it can glide away on electric power. Under acceleration, the petrol engine and electric motor work together. When slowing down, regenerative braking turns some of the car's kinetic energy back into electricity for the hybrid battery. Rear-wheel drive changes the feel as well: the front tyres are not trying to both steer and pull the car, so the IS feels more settled, more neutral and more natural through corners than many front-wheel-drive hybrids.",
       "checklist": [
         "Check for smooth hybrid-to-petrol transition",
         "Listen for any unusual drivetrain noises",
