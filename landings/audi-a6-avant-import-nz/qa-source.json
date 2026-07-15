@@ -25,7 +25,7 @@
     "why_kiwis_buy": "Some buyers want the space of a wagon without moving into an SUV, and that is where the A6 Avant makes sense. Audi Japan lists 466L of luggage space for this model, which is a useful detail because it shows the boot is genuinely usable rather than just stylish on paper. It also suits buyers chasing executive comfort, a refined cabin and quiet long-distance driving in a wagon body.",
     "savings_block": {
       "headline": "Where the money goes, from Japan purchase to NZ landed cost",
-      "body": "For this model, current pricing needs to be checked against live auction data before any number is put in front of you. The landed figure is built from the Japanese auction purchase price, shipping, marine insurance, NZ port charges, customs and entry costs, compliance-related steps and our fee, so you can see how the total is formed before approving a bid."
+      "body": "We prepare the costs for the specific car before you bid. The final figure depends on the vehicle price, Japan-side costs, shipping, AWA fee, customs clearance, compliance and on-road costs. Compliance and on-road costs vary by vehicle, so we confirm them individually rather than presenting a generic estimate."
     },
     "cta_form": {
       "headline": "Find your A6 Avant, we'll do the searching",
@@ -70,8 +70,8 @@
       "intro": "These are the model-level features worth checking for on the exact Japanese-market car.",
       "items": [
         {
-          "title": "quattro drivetrain",
-          "body": "Audi Japan lists quattro on the verified 2020 A6 Avant TFSI quattro 200kW. The exact torque-split strategy is not confirmed in the source used, but the key point for a buyer is that this is the all-wheel-drive version rather than a front-drive wagon.",
+          "title": "Drivetrain shown on the listing",
+          "body": "We confirm the engine and drivetrain from the individual auction listing. This avoids assuming the specification from a general model description.",
           "image_slot": "standout-1",
           "image_hint": "Audi A6 Avant on a wet motorway on-ramp, front three-quarter angle showing composed stance"
         },
@@ -108,8 +108,8 @@
           "body": "Audi Japan states a 7-speed S tronic transmission for this version. S tronic is Audi’s dual-clutch gearbox, so it shifts through pre-selected ratios rather than using a conventional torque-converter layout. Behind the wheel, that means a more direct feel when you accelerate and cleaner response when the road opens up."
         },
         {
-          "title": "quattro all-wheel drive",
-          "body": "The verified Japanese-market version here is the quattro model. The exact torque-split strategy is not verified in the source used, so it is better not to overstate the hardware details. What matters to the buyer is that this is the all-wheel-drive A6 Avant, which is part of why the car appeals to people who want a composed long-distance wagon rather than a front-drive alternative."
+          "title": "Drivetrain confirmation",
+          "body": "We confirm the engine and drivetrain stated on the individual auction listing, then explain what is known before you approve a bid."
         },
         {
           "title": "Matrix LED and audio options",
@@ -123,7 +123,7 @@
       "button_text": "Find My Car"
     },
     "models_comparison": {
-      "intro": "On this model, the main differences are the exact powertrain and option mix on each Japanese-market car.",
+      "intro": "We compare the exact auction listings available at the time of your search, rather than relying on generic variant assumptions.",
       "rows": [
         {
           "attribute": "Import viability",
@@ -198,7 +198,7 @@
       },
       {
         "q": "What makes up the landed cost?",
-        "a": "The landed figure is built from the auction purchase price, shipping, insurance, NZ port and customs costs, compliance-related steps and our fee. We will set that out before you approve a bid."
+        "a": "We price the specific auction vehicle before you bid. The estimate is built from the vehicle price, Japan-side costs, shipping, AWA fee, customs clearance, compliance and on-road costs. Compliance and on-road costs are confirmed individually for the selected car."
       },
       {
         "q": "Can you tell me if it will get through compliance?",
@@ -235,19 +235,35 @@
       ]
     },
     "landed_cost_breakdown": {
-      "intro": "The landed cost is more than the auction hammer price, so we break it down before you commit.",
+      "intro": "We prepare the landed-cost estimate for the selected vehicle before you bid.",
       "rows": [
         {
-          "item": "Auction price",
-          "notes": "Depends on the exact car, grade, mileage and option mix."
+          "item": "Vehicle price",
+          "notes": "The agreed purchase price for the specific vehicle."
         },
         {
-          "item": "Shipping and insurance",
-          "notes": "Added after purchase as part of the Japan-to-NZ transport process."
+          "item": "Japan-side costs",
+          "notes": "The relevant costs in Japan for that vehicle and purchase."
         },
         {
-          "item": "NZ entry certification and compliance",
-          "notes": "Completed in New Zealand after arrival."
+          "item": "Shipping",
+          "notes": "Freight for the confirmed vehicle and sailing."
+        },
+        {
+          "item": "AWA fee",
+          "notes": "The applicable AWA fee for the import."
+        },
+        {
+          "item": "Customs clearance",
+          "notes": "Clearance costs for the vehicle on arrival."
+        },
+        {
+          "item": "Compliance",
+          "notes": "Confirmed after the vehicle and its requirements are known."
+        },
+        {
+          "item": "On-road costs",
+          "notes": "Confirmed individually for the vehicle before you proceed."
         }
       ]
     },
@@ -305,11 +321,11 @@
     },
     "engine_drivetrain_block": {
       "headline": "Powertrain overview",
-      "body": "The verified Japanese-market 2020 A6 Avant fact supplied here is the TFSI quattro 200kW version. Audi Japan lists a 1,984cc turbo petrol four-cylinder with 200kW and 400Nm, paired with a 7-speed S tronic and quattro drivetrain. Exact engine, trim and listed equipment still need to be confirmed on the individual auction car before bidding.",
+      "body": "We assess the exact vehicle offered at auction. The listing, auction sheet, photos and available records tell us what we can verify before a bid; they do not replace a physical inspection.",
       "checklist": [
-        "Confirm the exact model code, engine and drivetrain on the auction car before bidding.",
-        "Check the auction grade, odometer reading and recorded condition notes on the supplied auction information.",
-        "Confirm listed equipment such as Matrix LED headlights, audio system and driver-assist features from the exact listing or photos."
+        "Confirm the exact engine and drivetrain shown in the auction listing.",
+        "Review the available photos and condition notes for visible issues or modifications.",
+        "Explain what is confirmed, what is unknown and what should be allowed for after arrival."
       ]
     },
     "category_block": {
