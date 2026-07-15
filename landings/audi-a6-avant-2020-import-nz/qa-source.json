@@ -25,7 +25,7 @@
     "why_kiwis_buy": "The 2020 Audi A6 Avant suits Kiwi buyers who want a roomy European wagon that still works as a reliable daily driver. Petrol and diesel options give you flexibility for open-road trips, while the long boot handles prams, golf clubs or work gear without drama.",
     "savings_block": {
       "headline": "Where the money goes — from Japan auction to NZ road",
-      "body": "With a 2020 Audi A6 Avant, your total spend typically starts with the winning Japanese auction price, then you add shipping, marine insurance, NZ port charges, and our fee. On arrival, there’s NZ entry certification, compliance work and on-road costs before you’re driving it home. We lay out each item in writing so you can see how the final landed cost is built up from the auction hammer price."
+      "body": "We prepare the costs for the specific car before you bid. The final figure depends on the vehicle price, Japan-side costs, shipping, AWA fee, customs clearance, compliance and on-road costs. Compliance and on-road costs vary by vehicle, so we confirm them individually rather than presenting a generic estimate."
     },
     "cta_form": {
       "headline": "Find your Audi A6 Avant — we'll do the searching",
@@ -71,27 +71,27 @@
       "button_text": "Happy to run the numbers for you."
     },
     "models_comparison": {
-      "intro": "Here’s how different 2020-era Audi A6 Avant options from Japan usually compare for NZ buyers.",
+      "intro": "We compare the exact auction listings available at the time of your search, rather than relying on generic variant assumptions.",
       "rows": [
         {
-          "attribute": "Year range",
-          "notes": "For a 2020 A6 Avant, you’re in the current-shape model, which typically meets NZ entry standards if documentation is clean and no major modifications are noted. Electronic stability control is standard at this age."
+          "attribute": "Vehicle identity",
+          "notes": "We confirm the year, model code, mileage and auction grade from each listing."
         },
         {
-          "attribute": "Powertrain or battery options",
-          "notes": "Japan offers both petrol and diesel engines, often with quattro all-wheel drive. Petrol suits mixed city and short-trip use, while diesel can work better if you’re doing regular long runs and want lower fuel use per km."
+          "attribute": "Engine and drivetrain",
+          "notes": "We compare only the engine and drivetrain stated on the individual auction sheet."
         },
         {
-          "attribute": "Key trim differences",
-          "notes": "Higher trims may add larger wheels, upgraded audio, leather upholstery and more driver-assist tech. S line packages usually bring sportier styling and firmer suspension, which you’ll notice on rougher NZ roads."
+          "attribute": "Specification",
+          "notes": "Photos and the auction sheet are used to compare the equipment, wheels, tyres and any visible modifications."
         },
         {
-          "attribute": "NZ compliance notes",
-          "notes": "Based on auction documentation, this model usually meets NZ entry standards if documentation is clean and no structural repairs are noted. Any aftermarket suspension, wheels or lighting will be checked at entry certification."
+          "attribute": "Condition notes",
+          "notes": "We translate the available notes and point out repairs, damage or items that need further checking."
         },
         {
-          "attribute": "Auction availability",
-          "notes": "The 2020 A6 Avant shows up regularly in major Japanese auctions, but specific trims, colours and low-kilometre diesels can take longer to find. More choice typically means better odds of matching your wish list."
+          "attribute": "Import requirements",
+          "notes": "Compliance and on-road work are assessed for the selected vehicle; they are not assumed from a generic model guide."
         }
       ]
     },
@@ -134,7 +134,7 @@
         },
         {
           "risk": "Hidden costs popping up after you’ve committed",
-          "solution": "We outline the main cost items up front — auction price, shipping, insurance, port charges, entry certification, compliance work, our fee and on-road costs. If something changes, such as shipping rates, we update you before proceeding."
+          "solution": "We outline the costs for the individual vehicle before you bid: vehicle price, Japan-side costs, shipping, AWA fee, customs clearance, compliance and on-road costs. Variable items are confirmed for the selected car."
         },
         {
           "risk": "Not knowing how auction grades translate to real condition",
@@ -150,7 +150,7 @@
       },
       {
         "q": "How much does it cost to import a 2020 Audi A6 Avant from Japan?",
-        "a": "Total cost depends on the auction price, exchange rate, shipping, insurance, port charges, entry certification, compliance work, our fee and on-road costs. Once we’ve seen a real auction example that matches your brief, we can give you a typical landed-cost range before you decide to bid."
+        "a": "We price the specific auction vehicle before you bid. The estimate is built from the vehicle price, Japan-side costs, shipping, AWA fee, customs clearance, compliance and on-road costs. Compliance and on-road costs are confirmed individually for the selected car."
       },
       {
         "q": "Will a 2020 Audi A6 Avant usually meet NZ compliance standards?",
@@ -182,19 +182,35 @@
       "items": []
     },
     "landed_cost_breakdown": {
-      "intro": "Your landed cost for a 2020 Audi A6 Avant covers the full journey from Japan auction to ready-to-register in NZ.",
+      "intro": "We prepare the landed-cost estimate for the selected vehicle before you bid.",
       "rows": [
         {
-          "item": "Auction price",
-          "notes": "The winning bid in Japan, plus local auction fees and inland transport if needed."
+          "item": "Vehicle price",
+          "notes": "The agreed purchase price for the specific vehicle."
         },
         {
-          "item": "Shipping and insurance",
-          "notes": "Ocean freight from Japan to NZ and marine insurance to cover the car while it’s on the water."
+          "item": "Japan-side costs",
+          "notes": "The relevant costs in Japan for that vehicle and purchase."
         },
         {
-          "item": "NZ entry certification and compliance",
-          "notes": "NZ port charges, entry certification, any compliance work required, our service fee and on-road costs to get it ready for you."
+          "item": "Shipping",
+          "notes": "Freight for the confirmed vehicle and sailing."
+        },
+        {
+          "item": "AWA fee",
+          "notes": "The applicable AWA fee for the import."
+        },
+        {
+          "item": "Customs clearance",
+          "notes": "Clearance costs for the vehicle on arrival."
+        },
+        {
+          "item": "Compliance",
+          "notes": "Confirmed after the vehicle and its requirements are known."
+        },
+        {
+          "item": "On-road costs",
+          "notes": "Confirmed individually for the vehicle before you proceed."
         }
       ]
     },
@@ -262,13 +278,13 @@
     },
     "engine_drivetrain_block": {
       "headline": "Engine and drivetrain checks for the A6 Avant",
-      "body": "On a 2020 Audi A6 Avant, the engine, gearbox and quattro system are the heart of how the car drives, so we pay close attention to them. We look for signs of regular servicing, clean engine bays and no mention of oil leaks or drivetrain noise on the auction sheet. That helps you land a wagon that feels smooth and predictable on NZ roads.",
+      "body": "We assess the exact vehicle offered at auction. The listing, auction sheet, photos and available records tell us what we can verify before a bid; they do not replace a physical inspection.",
       "checklist": [
-        "Confirm engine type (petrol or diesel) and typical issues for that code.",
-        "Check for oil leaks around the engine and transmission in auction photos.",
-        "Look for any mention of gearbox shudder, slipping or harsh shifts.",
-        "Check for uneven tyre wear that might point to alignment or suspension issues.",
-        "Prefer cars with documented servicing at recognised workshops in Japan."
+        "Confirm the exact engine and drivetrain shown in the auction listing.",
+        "Review the available photos and condition notes for visible issues or modifications.",
+        "Check the auction sheet and seller notes for reported mechanical or warning-light comments.",
+        "Review service history and mileage records where supplied.",
+        "Explain what is confirmed, what is unknown and what should be allowed for after arrival."
       ]
     },
     "category_block": {
