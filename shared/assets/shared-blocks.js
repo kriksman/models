@@ -1,5 +1,5 @@
 (function () {
-  var cssHref = "/shared/assets/import-shared-blocks.css?v=20260715-featured-discovery";
+  var cssHref = "/shared/assets/import-shared-blocks.css?v=20260701-client-crop";
   var selector = "[data-iyc-shared-block]";
 
   function ensureCss() {
