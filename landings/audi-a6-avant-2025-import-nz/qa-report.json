@@ -8,7 +8,7 @@
   "payload_approved_images_count": 16,
   "db_approved_images_count": 16,
   "rejected_images_count": 0,
-  "html_length": 59536,
+  "html_length": 58912,
   "theme": "theme-futuristic-light",
   "renderer": "premium-template-v9",
   "design_stack": [
@@ -45,5 +45,5 @@
     "modern CSS variables"
   ],
   "forbidden_stack_hits": [],
-  "checked_at": "2026-07-27T11:34:36.276Z"
+  "checked_at": "2026-07-27T12:21:21.092Z"
 }
