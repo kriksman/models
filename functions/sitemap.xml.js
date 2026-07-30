@@ -1,5 +1,5 @@
-const GITHUB_TREE_URL =
-  "https://api.github.com/repos/kriksman/models/git/trees/main?recursive=1";
+const GITHUB_LANDINGS_URL =
+  "https://api.github.com/repos/kriksman/models/contents/landings?ref=main";
 const RAW_BASE_URL =
   "https://raw.githubusercontent.com/kriksman/models/main/";
 const SITE_BASE_URL = "https://cars.importyourcar.co.nz";
@@ -15,27 +15,25 @@ function escapeXml(value) {
 }
 
 async function getIndexableSlugs() {
-  const treeResponse = await fetch(GITHUB_TREE_URL, {
+  const landingsResponse = await fetch(GITHUB_LANDINGS_URL, {
     headers: {
       Accept: "application/vnd.github+json",
       "User-Agent": "ImportYourCar-Sitemap",
     },
   });
 
-  if (!treeResponse.ok) {
-    throw new Error(`GitHub tree request failed: ${treeResponse.status}`);
+  if (!landingsResponse.ok) {
+    throw new Error(
+      `GitHub landings request failed: ${landingsResponse.status}`,
+    );
   }
 
-  const tree = await treeResponse.json();
-  const pages = tree.tree
-    .filter(
-      (entry) =>
-        entry.type === "blob" &&
-        /^landings\/[^/]+\/index\.html$/.test(entry.path),
-    )
+  const landings = await landingsResponse.json();
+  const pages = landings
+    .filter((entry) => entry.type === "dir")
     .map((entry) => ({
-      path: entry.path,
-      slug: entry.path.split("/")[1],
+      path: `${entry.path}/index.html`,
+      slug: entry.name,
     }));
 
   const checks = await Promise.all(
