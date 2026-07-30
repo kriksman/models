@@ -1,11 +1,11 @@
 {
   "landing_id": "f4eac6de-6f6a-4f6f-a5cd-24682dbaeae9",
   "slug": "audi-a6-avant-2025-import-nz",
-  "public_url": "https://importyourcar.co.nz/audi-a6-avant-2025-import-nz",
-  "canonical_url": "https://importyourcar.co.nz/audi-a6-avant-2025-import-nz",
+  "public_url": "https://cars.importyourcar.co.nz/audi-a6-avant-2025-import-nz/",
+  "canonical_url": "https://cars.importyourcar.co.nz/audi-a6-avant-2025-import-nz/",
   "live_url": "https://cars.importyourcar.co.nz/audi-a6-avant-2025-import-nz/",
   "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/audi-a6-avant-2025-import-nz/audi-a6-avant-2025-import-nz-hero-exterior-dynamic.jpg",
-  "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+  "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   "github_path": "landings/audi-a6-avant-2025-import-nz/index.html",
   "html_path": "landings/audi-a6-avant-2025-import-nz/index.html",
   "page_scope": "single_model",
@@ -67,8 +67,8 @@
     "semantic HTML",
     "modern CSS variables"
   ],
-  "status": "unpublished",
-  "index_status": "noindex",
+  "status": "published",
+  "index_status": "index",
   "sections_rendered": [
     "hero",
     "ticker",
