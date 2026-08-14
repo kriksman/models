@@ -4,7 +4,7 @@
   "public_url": "https://importyourcar.co.nz/toyota-prius-2023-import-nz",
   "canonical_url": "https://importyourcar.co.nz/toyota-prius-2023-import-nz",
   "live_url": "https://cars.importyourcar.co.nz/toyota-prius-2023-import-nz/",
-  "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/toyota-prius-2023-import-nz/toyota-prius-2023-import-nz-hero-exterior-dynamic.jpg",
+  "primary_image": "https://img.importyourcar.co.nz/toyota-prius-2023/hero-exterior-dynamic.webp",
   "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   "github_path": "landings/toyota-prius-2023-import-nz/index.html",
   "html_path": "landings/toyota-prius-2023-import-nz/index.html",
@@ -94,5 +94,10 @@
     "subscription",
     "footer_cta"
   ],
-  "menu_architecture": "inline-shared-menu-and-footer-loader"
+  "menu_architecture": "inline-shared-menu-and-footer-loader",
+  "image_slug": "toyota-prius-2023",
+  "primary_image_alt": "Grey 2023 Toyota Prius driving on a coastal road — Import Your Car",
+  "primary_image_width": 900,
+  "primary_image_height": 600,
+  "primary_image_bytes": 57908
 }
