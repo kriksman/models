@@ -4,7 +4,7 @@
   "public_url": "https://importyourcar.co.nz/toyota-alphard-2023-import-nz",
   "canonical_url": "https://importyourcar.co.nz/toyota-alphard-2023-import-nz",
   "live_url": "https://cars.importyourcar.co.nz/toyota-alphard-2023-import-nz/",
-  "primary_image": "https://raw.githubusercontent.com/kriksman/models/main/img/toyota-alphard-2023-import-nz/toyota-alphard-2023-import-nz-hero-exterior-dynamic.jpg",
+  "primary_image": "https://img.importyourcar.co.nz/toyota-alphard-2023/hero-exterior-dynamic.webp",
   "robots": "noindex,nofollow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
   "github_path": "landings/toyota-alphard-2023-import-nz/index.html",
   "html_path": "landings/toyota-alphard-2023-import-nz/index.html",
@@ -93,5 +93,6 @@
     "subscription",
     "footer_cta"
   ],
-  "menu_architecture": "inline-shared-menu-and-footer-loader"
+  "menu_architecture": "inline-shared-menu-and-footer-loader",
+  "image_slug": "toyota-alphard-2023"
 }
