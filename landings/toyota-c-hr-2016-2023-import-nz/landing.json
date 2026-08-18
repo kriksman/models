@@ -1,12 +1,12 @@
 {
-  "landing_id": "37a694d9-e724-4c63-a65d-56828a7f1c19",
+  "landing_id": "51384903-27d3-44f7-8f6f-3a88501eb228",
   "slug": "toyota-c-hr-2016-2023-import-nz",
   "public_url": "https://importyourcar.co.nz/toyota-c-hr-2016-2023-import-nz",
   "canonical_url": "https://importyourcar.co.nz/toyota-c-hr-2016-2023-import-nz",
   "live_url": "https://cars.importyourcar.co.nz/toyota-c-hr-2016-2023-import-nz/",
   "image_slug": "toyota-c-hr-2016",
   "primary_image": "https://img.importyourcar.co.nz/toyota-c-hr-2016/hero-exterior-dynamic.webp",
-  "primary_image_alt": "Toyota C-HR 2016 driving on a New Zealand road, left-side traffic, realistic driver visible through the windscreen at the right-hand steering… — Import Your Car",
+  "primary_image_alt": "Toyota C-HR 2016 driving on a New Zealand road — Import Your Car",
   "primary_image_width": 900,
   "primary_image_height": 900,
   "primary_image_bytes": 44610,
@@ -15,11 +15,11 @@
   "html_path": "landings/toyota-c-hr-2016-2023-import-nz/index.html",
   "page_scope": "single_model",
   "city": "NZ-wide",
-  "vehicle_type": "ev",
+  "vehicle_type": "hybrid",
   "design_direction": {
     "design_seed": "toyota-c-hr-2016-hybrid-single-model-nz-wide",
     "page_mood": "family_practical",
-    "visual_style": "editorial",
+    "visual_style": "utility-clean",
     "layout_rhythm": "compact",
     "image_treatment": "soft-offset-mix",
     "accent_style": "clear-trust",
@@ -32,7 +32,7 @@
       "editorial-gallery"
     ],
     "avoid": [
-      "generic dealership layout",
+      "generic stock-yard layout",
       "same card grid every section",
       "internal workflow wording"
     ]
