@@ -1,14 +1,16 @@
 {
-  "passed": true,
-  "issues": [],
+  "passed": false,
+  "issues": [
+    "Duplicate automotive images rendered in body: https://img.importyourcar.co.nz/toyota-c-hr-2016/feature-hybrid-system.webp"
+  ],
   "form_count": 1,
-  "approved_images_available": 16,
-  "approved_images_used": 14,
+  "approved_images_available": 15,
+  "approved_images_used": 15,
   "images_source": "payload",
-  "payload_approved_images_count": 16,
-  "db_approved_images_count": 16,
+  "payload_approved_images_count": 15,
+  "db_approved_images_count": 15,
   "rejected_images_count": 0,
-  "html_length": 63478,
+  "html_length": 58849,
   "theme": "theme-futuristic-light",
   "renderer": "premium-template-v9",
   "design_stack": [
@@ -45,5 +47,5 @@
     "modern CSS variables"
   ],
   "forbidden_stack_hits": [],
-  "checked_at": "2026-08-18T05:41:05.332Z"
+  "checked_at": "2026-08-18T08:45:52.554Z"
 }
